@@ -1,0 +1,46 @@
+#chk-burger {
+    display: none;
+}
+#chk-burger:checked ~ #burger {
+ transform: rotate(90deg);
+}
+#burger {
+    position: absolute;
+    transform: rotate(0deg);
+    transition: transform .3s;
+}
+
+#chk-burger:checked ~ .menu-principal-container {
+    display: block;
+   }
+.menu-principal-container{
+    display: none;
+    padding : 15px 0 0 0;
+    
+    .menu {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        .menu-item {
+            padding: 0px;
+            margin: 0px;
+            a {
+                font-family: $font__navigation-a;
+                padding: 5px;
+                text-decoration: none;
+                &hover {
+                   background-color: $color__background-link-hover;
+                   text-decoration: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $largeur__media-tablette) {
+    #burger {
+        display: none;
+    }
+    .menu-principal-container{
+        display: block;
+    }
+}

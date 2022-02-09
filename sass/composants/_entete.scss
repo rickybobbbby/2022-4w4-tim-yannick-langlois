@@ -1,0 +1,59 @@
+.site__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    font-family: $font__header-h1;
+
+    @media screen and (min-width: $largeur__media-tablette) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    
+    &__titre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: $largeur__media-tablette) {
+            padding-right: 5%;
+        }
+        .header__h1 { 
+            margin: 0.2em 0;
+            font-family: $font__header-h1;
+            font-size: clamp(3rem, 4vw, 4rem);
+        }
+        .header__h2 {
+            font-family: $font__header-h2;
+            font-size: clamp(.8rem, 1vw, 4rem);
+        }
+    }
+    &__util{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: $largeur__media-tablette) {
+            align-items: flex-end;
+            padding-right: 3%;
+        }
+        .icon{
+            display: flex;
+            &__lien{ 
+                padding: 5px 3px;
+            }
+        }
+        .recherche{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &__input{
+                outline: none;
+                border: none;
+                padding: 7px;
+            }
+            &__bouton{
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.site__main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(175, 0, 0);
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+.main__titre {
+    font-size: 2rem;
+    width: 100%;
+    display: block;
+
+}
+.carte {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid 1px;
+    width: 100%;
+    padding: 10px;
+    background-color: GhostWhite;
+    border-radius: 25px;
+}
+.carte__titre {
+    font-size: 1.5rem;
+    color: DimGrey;
+}
+.carte__contenu {
+    font-size: 0.8rem;
+    color: DimGrey;
+}
+@media screen and (min-width: $largeur__media-tablette) {
+    .carte {
+        width: 45%;
+    }
+}
+@media screen and (min-width: $largeur__media-desktop) {
+    .carte {
+        width: 30%;
+    }
+}

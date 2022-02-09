@@ -1,0 +1,37 @@
+/**
+Theme name: exercice1-yannick-langlois
+Author: Votre nom
+Description: Exercice dans le cadre du cours 4W4
+Version: 1.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+Text Domain: cidw-4w4
+*/
+
+
+/* ---------------INITIALISATION---------- */
+@import "initialisation/_normalize";
+@import "initialisation/_boxsize";
+
+/* -----------------------------------------------------------------
+VARIABLES
+------------------------------------------------------------------- */
+@import "variables/couleurs";
+@import "variables/structure";
+@import "variables/typo";
+
+/* -------------------LAYOUT---------- */
+@import "layout/_layout";
+
+/* -----------------------------------------------------------------
+ELEMENTS
+------------------------------------------------------------------- */
+@import "elements/links";
+
+/* -----------------------------------------------------------------
+COMPOSANTS
+------------------------------------------------------------------- */
+@import "composants/navigation";
+@import "composants/entete";
+@import "composants/cours";
+@import "composants/footer";
