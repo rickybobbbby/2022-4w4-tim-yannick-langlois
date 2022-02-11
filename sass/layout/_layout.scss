@@ -4,8 +4,8 @@
     gap: 10px;
 	grid-template-columns: auto;
 	grid-template-areas:
+        "barre"
 		"header"
-		"barre" 
         "main"
 		"footer";
 }
