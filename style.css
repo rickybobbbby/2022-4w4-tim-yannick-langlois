@@ -534,6 +534,7 @@ COMPOSANTS
 
 .site__header__titre .header__h2 {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  color: white;
   font-size: clamp(0.8rem, 1vw, 4rem);
 }
 
@@ -541,6 +542,7 @@ COMPOSANTS
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 700px) {
@@ -571,7 +573,6 @@ COMPOSANTS
 
 .site__header__util .recherche__input {
   color: #000;
-  background: #6e6e6e;
   background: rgba(0, 0, 0, 0.2);
   height: 30px;
   border-radius: 5px;
@@ -579,6 +580,11 @@ COMPOSANTS
   outline: none;
   border: none;
   padding: 7px;
+  transition: all 0.3s ease-out;
+}
+
+.site__header__util .recherche__input:hover, .site__header__util .recherche__input:not(:placeholder-shown) {
+  background: white;
 }
 
 .site__header__util .recherche__input::placeholder {

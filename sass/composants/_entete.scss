@@ -28,6 +28,7 @@
         }
         .header__h2 {
             font-family: $font__header-h2;
+            color: white;
             font-size: clamp(.8rem, 1vw, 4rem);
         }
     }
@@ -35,6 +36,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 20px;
         @media screen and (min-width: $largeur__media-tablette) {
             align-items: flex-end;
             padding-right: 3%;
@@ -56,7 +58,6 @@
             position: relative;
             &__input{
                 color: #000;
-                background: $color__background-main;
                 background: rgba(0,0,0,.2);
                 height: 30px;
                 border-radius: 5px;
@@ -64,6 +65,10 @@
                 outline: none;
                 border: none;
                 padding: 7px;
+                transition: all 0.3s ease-out;
+                &:hover, &:not(:placeholder-shown){
+                    background: $color__background-barre;
+                }
                 &::placeholder{
                     color: rgb(41, 41, 41);
                 }
