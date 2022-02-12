@@ -346,7 +346,7 @@ VARIABLES
 
 .site__header {
   grid-area: header;
-  background-color: #cfcfcf;
+  background-color: #31b3ff;
 }
 
 .site__barre {
@@ -356,12 +356,12 @@ VARIABLES
 
 .site__main {
   grid-area: main;
-  background-color: #a82f2f;
+  background-color: #6e6e6e;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #382222;
+  background-color: #1b394b;
 }
 
 @media screen and (min-width: 700px) {
@@ -523,7 +523,7 @@ COMPOSANTS
 }
 
 .site__header__titre .header__h1 {
-  margin: 0.2em 0;
+  margin: 0.2em 0 0 0.2em;
   font-family: "poppins", sans-serif;
   font-size: clamp(3rem, 4vw, 4rem);
   background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center right 6.5%;
@@ -573,7 +573,7 @@ COMPOSANTS
 .site__main {
   display: flex;
   flex-wrap: wrap;
-  background-color: #af0000;
+  background-color: #006faf;
   justify-content: space-evenly;
   row-gap: 20px;
 }
@@ -592,28 +592,32 @@ COMPOSANTS
   border: 1px solid 1px;
   width: 100%;
   padding: 10px;
-  background-color: GhostWhite;
+  background-color: white;
   border-radius: 25px;
+  transition: all 0.3s ease-out;
+  color: #646464;
+}
+
+.carte:hover {
+  background-color: #003a5c;
+  color: #cfcfcf;
 }
 
 .carte__titre {
   font-size: 1.5rem;
-  color: DimGrey;
 }
 
 .carte__contenu {
   font-size: 0.8rem;
-  color: DimGrey;
 }
 
 @media screen and (min-width: 700px) {
   .carte {
     width: 45%;
-    transition: all 0.3s ease-out;
   }
   .carte:hover {
     transform: scale(1.1);
-    box-shadow: 5px 5px 15px 1px #4b4b4b;
+    box-shadow: 5px 5px 15px 1px black;
   }
 }
 

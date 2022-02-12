@@ -17,8 +17,8 @@
         @media screen and (min-width: $largeur__media-tablette) {
             padding-right: 5%;
         }
-        .header__h1 { 
-            margin: 0.2em 0;
+        .header__h1 {
+            margin: 0.2em 0 0 0.2em;
             font-family: $font__header-h1;
             font-size: clamp(3rem, 4vw, 4rem);
             background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center right 6.5%;

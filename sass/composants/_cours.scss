@@ -1,7 +1,7 @@
 .site__main {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(175, 0, 0);
+    background-color: $color__background-section;
     justify-content: space-evenly;
     row-gap: 20px;
 }
@@ -19,24 +19,27 @@
     border: 1px solid 1px;
     width: 100%;
     padding: 10px;
-    background-color: GhostWhite;
+    background-color: $color__background-barre;
     border-radius: 25px;
+    transition: all 0.3s ease-out;
+    color: $color__main-carte;
+    &:hover {
+        background-color: $color__background-carte-hover;
+        color: $color__main-carte-hover;
+    }
 }
 .carte__titre {
     font-size: 1.5rem;
-    color: DimGrey;
 }
 .carte__contenu {
     font-size: 0.8rem;
-    color: DimGrey;
 }
 @media screen and (min-width: $largeur__media-tablette) {
     .carte {
         width: 45%;
-        transition: all 0.3s ease-out;
         &:hover {
             transform: scale(1.1);
-            box-shadow: 5px 5px 15px 1px rgba($color: #4b4b4b, $alpha: 1.0);
+            box-shadow: 5px 5px 15px 1px rgba($color: #000000, $alpha: 1.0);
         }
     }
 }
