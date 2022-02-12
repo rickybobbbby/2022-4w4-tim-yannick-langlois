@@ -1,22 +1,20 @@
 .site__footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-}
-
-
-
-.site__info{
-    color: whitesmoke;
-    display: flex;
-    flex-direction: row;
-}
-
-.site__info2{
-    display: flex;
-    flex-direction: row;
-}
-
-.site__info2__droit{
-    color: whitesmoke;
+    color: $color__main-carte-hover;
+    .site__info{
+        font-size: clamp(.5rem, 1vw, 4rem);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .site__info__nouvelle{
+            max-width: 30%;
+        }
+    
+    }
+    .site__info2__droit{
+        background-color: $color__background-body;
+        text-align: center; 
+    }
 }
