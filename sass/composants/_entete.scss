@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
- 
     font-family: $font__header-h1;
 
     @media screen and (min-width: $largeur__media-tablette) {
@@ -22,6 +21,9 @@
             margin: 0.2em 0;
             font-family: $font__header-h1;
             font-size: clamp(3rem, 4vw, 4rem);
+            background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center right 6.5%;
+            background-size: 20%;
+            background-repeat: no-repeat;
         }
         .header__h2 {
             font-family: $font__header-h2;
