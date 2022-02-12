@@ -43,6 +43,10 @@
             display: flex;
             &__lien{ 
                 padding: 5px 3px;
+                &:hover svg{
+                    fill: $color__main-carte-hover;
+                }
+
             }
         }
         .recherche{
@@ -51,12 +55,43 @@
             align-items: center;
             position: relative;
             &__input{
+                color: #000;
+                background: $color__background-main;
+                background: rgba(0,0,0,.2);
+                height: 30px;
+                border-radius: 5px;
+                appearance: none;
                 outline: none;
                 border: none;
                 padding: 7px;
+                &::placeholder{
+                    color: rgb(41, 41, 41);
+                }
             }
             &__bouton{
-            }
+                background-color: $color__background-footer;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: 0px 5px 5px 0px;
+                border: none;
+                padding: 0px 0px;
+                max-width: 0px;
+                transition: all 0.3s ease-out;
+                svg {
+                    transition: all 0.3s ease-out;
+                    opacity: 0%;
+                }
+            }         
         }
+        input:not(:placeholder-shown) {
+            + .recherche__bouton {
+                padding: 1px 6px;
+                max-width: 36px;
+                svg {
+                    opacity: 100%;
+                }
+            }
+          }
     }
 }

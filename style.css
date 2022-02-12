@@ -477,7 +477,7 @@ COMPOSANTS
 
 .menu-principal-container .menu .menu-item a {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  padding: 5px;
+  padding: 5px 5px 5px 15px;
   text-decoration: none;
 }
 
@@ -558,6 +558,10 @@ COMPOSANTS
   padding: 5px 3px;
 }
 
+.site__header__util .icon__lien:hover svg {
+  fill: #cfcfcf;
+}
+
 .site__header__util .recherche {
   display: flex;
   justify-content: center;
@@ -566,9 +570,45 @@ COMPOSANTS
 }
 
 .site__header__util .recherche__input {
+  color: #000;
+  background: #6e6e6e;
+  background: rgba(0, 0, 0, 0.2);
+  height: 30px;
+  border-radius: 5px;
+  appearance: none;
   outline: none;
   border: none;
   padding: 7px;
+}
+
+.site__header__util .recherche__input::placeholder {
+  color: #292929;
+}
+
+.site__header__util .recherche__bouton {
+  background-color: #1b394b;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 0px 0px;
+  max-width: 0px;
+  transition: all 0.3s ease-out;
+}
+
+.site__header__util .recherche__bouton svg {
+  transition: all 0.3s ease-out;
+  opacity: 0%;
+}
+
+.site__header__util input:not(:placeholder-shown) + .recherche__bouton {
+  padding: 1px 6px;
+  max-width: 36px;
+}
+
+.site__header__util input:not(:placeholder-shown) + .recherche__bouton svg {
+  opacity: 100%;
 }
 
 .site__main {
