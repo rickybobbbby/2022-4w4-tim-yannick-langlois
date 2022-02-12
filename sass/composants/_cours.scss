@@ -8,7 +8,9 @@
 .main__titre {
     font-size: 2rem;
     width: 100%;
+    padding : 0 0 0 15px; 
     display: block;
+    font-family: $font__main-h2;
 
 }
 .carte {
@@ -31,6 +33,11 @@
 @media screen and (min-width: $largeur__media-tablette) {
     .carte {
         width: 45%;
+        transition: all 0.3s ease-out;
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 5px 5px 15px 1px rgba($color: #4b4b4b, $alpha: 1.0);
+        }
     }
 }
 @media screen and (min-width: $largeur__media-desktop) {

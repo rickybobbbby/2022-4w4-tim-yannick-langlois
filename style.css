@@ -578,7 +578,9 @@ COMPOSANTS
 .main__titre {
   font-size: 2rem;
   width: 100%;
+  padding: 0 0 0 15px;
   display: block;
+  font-family: "Roboto", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
 .carte {
@@ -604,6 +606,11 @@ COMPOSANTS
 @media screen and (min-width: 700px) {
   .carte {
     width: 45%;
+    transition: all 0.3s ease-out;
+  }
+  .carte:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px 1px #4b4b4b;
   }
 }
 
