@@ -2,7 +2,7 @@
 /**
 Theme name: exercice1-yannick-langlois
 Author: yannick langlois
-Author URI: https://github.com/rickybobbbby/2022-4w4-tim-ex1
+Author URI: https://github.com/rickybobbbby/2022-4w4-tim-yannick-langlois
 Description: Exercice dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
@@ -385,8 +385,6 @@ VARIABLES
 ELEMENTS
 ------------------------------------------------------------------- */
 a {
-  display: flex;
-  flex-direction: column;
   color: #777777;
 }
 
@@ -403,6 +401,28 @@ a:focus {
 }
 
 a:hover, a:active {
+  outline: 0;
+}
+
+.site__footer a {
+  display: flex;
+  flex-direction: column;
+  color: #a8a8a8;
+}
+
+.site__footer a:visited {
+  color: #383838;
+}
+
+.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
+  color: #191970;
+}
+
+.site__footer a:focus {
+  outline: thin dotted;
+}
+
+.site__footer a:hover, .site__footer a:active {
   outline: 0;
 }
 
@@ -697,5 +717,14 @@ COMPOSANTS
 .site__footer .site__info2__droit {
   background-color: #383838;
   text-align: center;
+}
+
+.site__footer__menu__ul {
+  list-style-type: none;
+}
+
+.site__footer__menu__ul .menu_item a {
+  text-decoration: none;
+  padding: 3px;
 }
 /*# sourceMappingURL=style.css.map */

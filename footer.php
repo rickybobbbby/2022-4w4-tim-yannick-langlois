@@ -17,7 +17,7 @@
              <p>Lorem ipsum dolor sit</p>      
          </section>
 
-         <?php wp_nav_menu(array("menu" => "footer", "container" => "nav")); ?>
+         <?php wp_nav_menu(array("menu" => "footer", "container" => "nav", "container_class" => "site__footer")); ?>
 
          <section class="site__info__nouvelle">
              <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur</p>

@@ -1,6 +1,4 @@
 a {
-    display: flex;
-    flex-direction: column;
 	color: $color__link;
 
 	&:visited {
@@ -11,6 +9,30 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+.site__footer a {
+    display: flex;
+    flex-direction: column;
+	color: $color__link__footer;
+
+	&:visited {
+		color: $color__link__footer-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link__footer-hover;
 	}
 
 	&:focus {

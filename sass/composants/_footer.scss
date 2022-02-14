@@ -10,11 +10,21 @@
         justify-content: space-evenly;
         .site__info__nouvelle{
             max-width: 30%;
+
         }
     
     }
     .site__info2__droit{
         background-color: $color__background-body;
         text-align: center; 
+    }
+}
+.site__footer__menu__ul{
+    list-style-type: none;
+    .menu_item{
+        a{
+            text-decoration: none;
+            padding: 3px;
+        }
     }
 }
