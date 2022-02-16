@@ -33,13 +33,13 @@
               align-items: center;
               padding : 3px;
               svg { // .site__footer__menu__ul .menu-item a svg
-                color: aqua;
-              }
-              &:hover svg{
-                color: $color__link__footer-hover;
+                fill: aqua;
               }
               &:visited svg{
-                color: $color__link__footer-visited;
+                fill: $color__link__footer-visited;
+              }
+              &:hover svg{
+                fill: $color__link__footer-hover;
               }
             }
           }

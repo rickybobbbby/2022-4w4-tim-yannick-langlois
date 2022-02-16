@@ -500,7 +500,7 @@ COMPOSANTES
   display: block;
   text-decoration: none;
   padding: 4px;
-  background-color: #ffa3a3;
+  background-color: #dedede;
 }
 
 .menu-item a:hover {
@@ -561,15 +561,15 @@ COMPOSANTES
 }
 
 .site__footer__menu__ul .menu-item a svg {
-  color: aqua;
-}
-
-.site__footer__menu__ul .menu-item a:hover svg {
-  color: #19e123;
+  fill: aqua;
 }
 
 .site__footer__menu__ul .menu-item a:visited svg {
-  color: #1435eb;
+  fill: #1435eb;
+}
+
+.site__footer__menu__ul .menu-item a:hover svg {
+  fill: #19e123;
 }
 
 .footer__titre,
