@@ -1,36 +1,33 @@
-<?php
-function cidw_4w4_enqueue() {
-    wp_enqueue_style('style_css', 
-    get_template_directory_uri() . '/style.css',
-    array(),
-    filemtime(get_template_directory() . '/style.css'),
-    false);
+<?php 
 
-    wp_enqueue_style( 'wpb-google-fonts',
-        'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300',
-        false ); 
+function cidw_4w4_enqueue(){
+    //wp_enqueue_style('style_css', get_stylesheet_uri());
+    wp_enqueue_style('4w4-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
 }
 
 add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
 
-
-function cidw_4w4_enregistre_mon_menu() {
-    register_nav_menus(
-        array(
-        'principal'=> __( 'menu_principal', 'cidw_4w4' ),
-        'footer' => __( 'menu_footer', 'cidw_4w4' )
-        ) 
-    );
+/* -------------------------------------------------- Enregistré le menu */
+function cidw_4w4_register_nav_menu(){
+    register_nav_menus( array(
+        'menu_principal' => __( 'Menu principal', 'cidw_4w4' ),
+        'menu_footer'  => __( 'Menu footer', 'cidw_4w4' ),
+    ) );
 }
-add_action( 'after_setup_theme', 'cidw_4w4_enregistre_mon_menu' );
+add_action( 'after_setup_theme', 'cidw_4w4_register_nav_menu', 0 );
 
-/* ------ filtré chacun ------*/
-function cidw_4w4_filtre_le_menu($mon_object){
-    foreach($mon_object as $cle => $valeur){
-        /*$valeur->title = substr($valeur->title, 0, 7);*/
-        $valeur->title = wp_trim_words($valeur->title, 3, "...");
+/* ---------------------------------------------------------------------- filtré les choix du menu principal */
+function cidw_4w4_filtre_choix_menu($obj_menu){
+    //var_dump($obj_menu);
+    foreach($obj_menu as $cle => $value)
+    {
+       // print_r($value);
+       //$value->title = substr($value->title,0,7);
+       $value->title = wp_trim_words($value->title,3,"...");
+       // echo $value->title . '<br>';
     }
-    return $mon_object;
+    return $obj_menu;
 }
-add_filter("wp_nav_menu_objects","cidw_4w4_filtre_le_menu");
+add_filter("wp_nav_menu_objects","cidw_4w4_filtre_choix_menu")
+
 ?>

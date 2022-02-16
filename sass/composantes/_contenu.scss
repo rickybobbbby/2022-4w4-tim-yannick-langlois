@@ -1,0 +1,62 @@
+.principal {
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: $color__background-main;
+    border-radius: 5px;
+    box-shadow: rgb(57, 68, 62) 1px -1px 10px;
+}
+
+.formation {
+    display: flex;
+    flex-direction: column;
+
+    &__titre {
+        font-size: 2rem;
+        color: $color__font-main;
+        margin: 10px 0px;
+        font-family: $font__titre;
+    }
+    &__liste {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &__cours {
+        background-color: $color__background-cours;
+        box-shadow: rgb(57, 64, 68) 1px -1px 10px;
+        border-radius: 5px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @media screen and (min-width : $largeur__media--tablette){
+            width: 45%;
+        }
+        @media screen and (min-width : $largeur__media--desktop){
+            width: 30%;
+        }
+        padding: 10px;
+    }
+
+
+}
+
+
+
+
+
+.cours__titre {
+    font-size: 1.5rem;
+    color: $color__font-main;
+    margin: 5px 0px;
+}
+
+.cours__sigle {
+    font-size: 1.2rem;
+    color: rgb(138, 83, 83);
+    margin: 0;
+}
+
+.cours__description {
+    font-size: 1rem;
+}

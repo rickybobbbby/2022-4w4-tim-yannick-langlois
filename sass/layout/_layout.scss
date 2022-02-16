@@ -1,22 +1,22 @@
+/*
+theme name: Lab 2 Lemieux Florence
+*/
+
 .site {
-    background-color: $color__background-body ;
-	display: grid;
-    gap: 10px;
-	grid-template-columns: auto;
-	grid-template-areas:
-        "barre"
-		"header"
-        "main"
-		"footer";
+    //background-color: rgb(122, 176, 207);
+    background-color: $color__background-body;
+    font-family: $font__main;
 }
 
+
+
 .site__header{
-    grid-area: header;
+    grid-area: header;  
     background-color: $color__background-header;
 }
 
 .site__barre{
-    grid-area: barre;
+    grid-area: sidebar;
     background-color: $color__background-barre;
 }
 
@@ -30,21 +30,25 @@
     background-color: $color__background-footer;
 }
 
-@media screen and (min-width: $largeur__media-tablette) {
+.site {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+		"sidebar"
+        "header"
+		"main"
+		"footer";
+}
+
+@media screen and (min-width : $largeur__media--tablette)
+{
     .site {
-        grid-template-columns: ($size__site-sidebar) auto;
+        grid-template-columns: ($size__site-barre) auto;
         grid-template-areas:
             "header header"
-            "barre main"
+            "sidebar main"
             "footer footer";
     }
-}/*fin media query tablette*/
-@media screen and (min-width: $largeur__media-desktop) {
-    .site {
-        grid-template-columns: ($size__site-sidebar) auto;
-        grid-template-areas:
-            "header header"
-            "barre main"
-            "footer footer";
-    }
-} /*fin media query destop*/
+}
+
+

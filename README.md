@@ -1,10 +1,12 @@
-# 2022-4w4-tim-ex1
-exercice 1
+# Exrcice #1 - 4W4 - Conception d'interface et développement Web
+### Auteur : Eddy Martin
+### Date de remise : 11 février 2022
 
-Les 3 principaux transformation:
--1. menu burger refait
--2. highlight des cours si hover
--3. modification drastique de la barre de recherche
+```
+Cet exercice nous a permis d'introduire la structure d'un thème Wordpress. Voici la structure utilisée:
+-Pour le style css nous avons utilisé Sass
+-Les fonctions du thème se trouvent dans «functions.php»
+-Les modèle principal est : «index.php»
 
-SVP les commantaire ne son pas demander dans le devis, mais si sa peu augmenter ma note,
-svp me les demander et je ferai une commit juste pour sa
+Pour modifier readme.md
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax

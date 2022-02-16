@@ -1,0 +1,55 @@
+
+#burger {
+    position : absolute;
+    transition : transform .3s;
+    transform : rotate(0);
+}
+
+#chk-burger:checked ~ #burger {
+    transform : rotate(90deg);
+}
+.menu-principal-container {
+    display : none;
+}
+#chk-burger:checked ~ .menu-principal-container{
+    display : block;
+}
+
+
+.menu-principal-container{}
+.menu{
+    list-style-type: none;
+    margin : 0;
+    padding :0;
+}
+.menu-item{
+    margin:0;
+    padding : 0;
+    a{
+        display : block;
+        text-decoration: none;
+        padding : 4px;
+        background-color: $color__background-link;
+        &:hover {
+            background-color: $color__background-link-hover;
+        }
+    }
+}
+
+@media screen and (min-width : $largeur__media--tablette){
+    #burger {
+        display : none;
+    }
+    .menu-principal-container {
+        display : block;
+    }
+
+}
+
+
+
+
+
+
+
+

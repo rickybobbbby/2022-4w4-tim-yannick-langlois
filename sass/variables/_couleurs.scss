@@ -1,22 +1,25 @@
-$color__background-body: rgb(56, 56, 56);
-$color__background-section: rgb(0, 111, 175);
-$color__background-header:rgb(49, 179, 255);
-$color__background-barre:rgb(255, 255, 255);
-$color__background-footer: rgb(27, 57, 75);
-$color__background-main:rgb(110, 110, 110);
-$color__background-carte-hover: rgb(0, 58, 92);
+/* ---------------- BACKGROUND */
+$color__background-body : hsl(18, 19%, 49%);
+$color__background-main : hsl(0, 64%, 79%);
+$color__background-cours : hsl(7, 100%, 91%);
+$color__background-header : hsl(17, 25%, 28%);
+$color__background-barre : hsl(0, 100%, 76%);
+$color__background-footer : hsl(17, 8%, 17%);
+$color__background-link : hsl(0, 100%, 82%);
+$color__background-link-hover : hsl(0, 100%, 91%);
 
-// liens
-$color__link: #777777; //royalblue
-$color__link-visited: #dadada; //purple
-$color__link-hover: #191970; //midnightblue
+/* ---------------- LIENS */
+$color__link : hsl(18, 27%, 38%);
+$color__link-hover : hsl(0, 0%, 100%);
+$color__link-visited : hsl(19, 29%, 28%);
+/* ---------------- LIENS FOOTER */
+$color__link__footer : hsl(0, 91%, 50%);
+$color__link__footer-hover : hsl(123, 80%, 49%);
+$color__link__footer-visited : hsl(231, 84%, 50%);
 
-$color__background-link-hover: #000000;
-//texte color
-$color__main-carte: rgb(100, 100, 100);
-$color__main-carte-hover: rgb(207, 207, 207);
 
-// footer
-$color__link__footer: #a8a8a8; //royalblue
-$color__link__footer-visited: #383838; //purple
-$color__link__footer-hover: #191970; //midnightblue
+/* ---------------- FONT */
+$color__font-header : rgb(250, 146, 146);
+$color__font-main :rgb(68, 57, 54);
+$color__font-barre : rgb(255, 255, 255);
+$color__font-footer : rgb(255, 202, 188);
