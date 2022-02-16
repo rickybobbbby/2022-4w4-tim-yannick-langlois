@@ -522,6 +522,28 @@ COMPOSANTES
   padding: 15px;
 }
 
+.site__footer__info1 {
+  display: flex;
+  justify-content: center;
+}
+
+.site__footer__info1 .elem {
+  width: 20%;
+  border: 1px solid #a09e9e;
+}
+
+.site__footer__info1 .elem__h1 {
+  background-color: yellow;
+}
+
+.site__footer__info1 .elem__h2 {
+  background-color: yellowgreen;
+}
+
+.site__footer__info1 .elem__p {
+  background-color: #727272;
+}
+
 .site__footer__menu__ul {
   display: flex;
   list-style-type: none;
@@ -540,6 +562,14 @@ COMPOSANTES
 
 .site__footer__menu__ul .menu-item a svg {
   color: aqua;
+}
+
+.site__footer__menu__ul .menu-item a:hover svg {
+  color: #19e123;
+}
+
+.site__footer__menu__ul .menu-item a:visited svg {
+  color: #1435eb;
 }
 
 .footer__titre,

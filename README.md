@@ -1,6 +1,6 @@
 # Exrcice #1 - 4W4 - Conception d'interface et développement Web
-### Auteur : Eddy Martin
-### Date de remise : 11 février 2022
+### Auteur : Yannick langlois
+### Date de remise : 16 février 2022
 
 ```
 Cet exercice nous a permis d'introduire la structure d'un thème Wordpress. Voici la structure utilisée:

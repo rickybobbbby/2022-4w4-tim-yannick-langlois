@@ -2,6 +2,23 @@
     font-family: $font__titre;
     background-color: $color__background-footer;
     padding: 15px;
+    &__info1{
+      display: flex;
+      justify-content: center;
+      .elem {
+        width: 20%;
+        border: 1px solid rgb(160, 158, 158);
+        &__h1{
+          background-color: yellow;
+        }
+        &__h2{
+          background-color: yellowgreen;
+        }
+        &__p{
+          background-color: rgb(114, 114, 114);
+        }
+      }
+    }
 
     &__menu{ // .site__footer__menu
 
@@ -17,6 +34,12 @@
               padding : 3px;
               svg { // .site__footer__menu__ul .menu-item a svg
                 color: aqua;
+              }
+              &:hover svg{
+                color: $color__link__footer-hover;
+              }
+              &:visited svg{
+                color: $color__link__footer-visited;
               }
             }
           }
