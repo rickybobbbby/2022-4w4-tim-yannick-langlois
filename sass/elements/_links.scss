@@ -37,3 +37,9 @@ a {
 					$color__link__footer-hover );
 }
 
+.header__titre a{
+	@include links(	$color__link__header,
+					$color__link__header-visited, 
+					$color__link__header-hover );
+}
+
