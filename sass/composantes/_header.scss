@@ -10,9 +10,13 @@
     justify-content: space-between;
   }
   &__titre{
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    a{
+        text-decoration: none;
+    }
     @media screen and (min-width: $largeur__media--tablette) {
         margin: 0 0 0 6em;
         padding-right: 5%;
@@ -20,7 +24,7 @@
     .header__titre {
       margin: 0.2em 0 0 0;
       font-size: clamp(3rem, 4vw, 4rem);
-      background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center right 6.5%;
+      background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center left 4%;
       background-size: 20%;
       background-repeat: no-repeat;
       font-family: $font__titre;

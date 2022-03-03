@@ -388,11 +388,11 @@ a:hover, a:active {
 }
 
 .header__titre a {
-  color: white;
+  color: black;
 }
 
 .header__titre a:visited {
-  color: white;
+  color: black;
 }
 
 .header__titre a:hover, .header__titre a:focus, .header__titre a:active {
@@ -412,7 +412,7 @@ COMPOSANTES
 --------------------------------------------------------- */
 .site__main {
   padding: 10px 15px;
-  background-color: #6e6e6e;
+  background-color: #383838;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
 }
@@ -424,7 +424,7 @@ COMPOSANTES
 
 .formation__titre {
   font-size: 2rem;
-  color: #d6d6d6;
+  color: white;
   margin: 10px 0px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -435,9 +435,9 @@ COMPOSANTES
 }
 
 .formation__cours {
-  background-color: #006faf;
+  background-color: white;
   box-shadow: #394044 1px -1px 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -451,6 +451,7 @@ COMPOSANTES
     width: 45%;
   }
   .formation__cours:hover {
+    background-color: #73ccff;
     transform: scale(1.1);
     box-shadow: 5px 5px 15px 1px black;
   }
@@ -464,7 +465,7 @@ COMPOSANTES
 
 .cours__titre {
   font-size: 1.5rem;
-  color: #d6d6d6;
+  color: #292929;
   margin: 5px 0px;
 }
 
@@ -494,9 +495,14 @@ COMPOSANTES
 }
 
 .site__header__titre {
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.site__header__titre a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 700px) {
@@ -509,7 +515,7 @@ COMPOSANTES
 .site__header__titre .header__titre {
   margin: 0.2em 0 0 0;
   font-size: clamp(3rem, 4vw, 4rem);
-  background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center right 6.5%;
+  background: url(https://s2.svgbox.net/loaders.svg?ic=rings) center left 4%;
   background-size: 20%;
   background-repeat: no-repeat;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -735,8 +741,7 @@ COMPOSANTES
 }
 
 .footer__titre,
-.footer__presentation,
-.footer__author {
+.footer__presentation {
   color: #cecece;
   text-align: center;
 }
@@ -790,7 +795,7 @@ LAYOUT
 theme name: theme-4w4-yannick-langlois
 */
 .site {
-  background-color: #383838;
+  background-color: #6e6e6e;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: grid;
   gap: 10px;
@@ -810,7 +815,7 @@ theme name: theme-4w4-yannick-langlois
 
 .site__main {
   grid-area: main;
-  background-color: #6e6e6e;
+  background-color: #383838;
 }
 
 .site__footer {

@@ -10,9 +10,7 @@
                         "menu_class"=>"site__footer__menu__ul",
 
                         "link_before"=>$icone)); ?>
-
-    <p class="footer__presentation">Copyright 2022 - College de Maisonneuve.</p>
-    <h3 class="footer__author">Realiser par Yannick Langlois</h3>
+    <p class="footer__presentation">Copyright 2022 - College de Maisonneuve.</p> 
 </footer>
 <?php wp_footer(); ?>
 </body>
