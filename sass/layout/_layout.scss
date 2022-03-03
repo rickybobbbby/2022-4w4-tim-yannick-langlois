@@ -3,6 +3,7 @@ theme name: theme-4w4-yannick-langlois
 */
 
 .site {
+    //background-color: rgb(122, 176, 207);
     background-color: $color__background-body;
     font-family: $font__main;
     display: grid;
@@ -15,10 +16,13 @@ theme name: theme-4w4-yannick-langlois
 		"footer";
 }
 
+
+
 .site__header{
     grid-area: header;  
     background-color: $color__background-header;
 }
+
 .site__barre{
     grid-area: sidebar;
     background-color: $color__background-barre;
@@ -28,28 +32,21 @@ theme name: theme-4w4-yannick-langlois
     grid-area: main;
     background-color: $color__background-main;
 }
+
 .site__footer{
     grid-area: footer;
     background-color: $color__background-footer;
 }
 
-@media screen and (min-width: $largeur__media-tablette) {
+@media screen and (min-width : $largeur__media--tablette)
+{
     .site {
         grid-template-columns: ($size__site-sidebar) auto;
         grid-template-areas:
             "header header"
-            "barre main"
+            "sidebar main"
             "footer footer";
     }
-}/*fin media query tablette*/
-@media screen and (min-width: $largeur__media-desktop) {
-    .site {
-        grid-template-columns: ($size__site-sidebar) auto;
-        grid-template-areas:
-            "header header"
-            "barre main"
-            "footer footer";
-    }
-} /*fin media query destop*/
+}
 
 
