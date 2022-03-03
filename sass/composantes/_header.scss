@@ -56,9 +56,14 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        width: 300px;
+        @media screen and (min-width: $largeur__media--tablette) {
+            width: 200px;
+            }
         &__input{
             color: #000;
             background: rgba(0,0,0,.2);
+            width: 90%;
             height: 30px;
             border-radius: 5px;
             appearance: none;
@@ -89,6 +94,7 @@
             }
         }         
     }
+    
     input:not(:placeholder-shown) {
         + .recherche__bouton {
             padding: 1px 6px;
