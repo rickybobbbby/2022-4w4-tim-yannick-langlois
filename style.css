@@ -348,11 +348,11 @@ html {
 ÉLÉMENTS
 --------------------------------------------------------- */
 a {
-  color: #777777;
+  color: #363636;
 }
 
 a:visited {
-  color: #dadada;
+  color: #9b9b9b;
 }
 
 a:hover, a:focus, a:active {
@@ -412,7 +412,7 @@ COMPOSANTES
 --------------------------------------------------------- */
 .site__main {
   padding: 10px 15px;
-  background-color: #383838;
+  background-color: #cacaca;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
 }
@@ -815,7 +815,7 @@ theme name: theme-4w4-yannick-langlois
 
 .site__main {
   grid-area: main;
-  background-color: #383838;
+  background-color: #cacaca;
 }
 
 .site__footer {
