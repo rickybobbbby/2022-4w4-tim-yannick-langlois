@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-Theme name: exercice1-yannick-langlois
+Theme name: theme-4w4-yannick-langlois
 Author: yannick langlois
 Author URI: https://github.com/rickybobbbby/2022-4w4-tim-yannick-langlois
 Description: Exercice dans le cadre du cours 4W4
@@ -346,15 +346,15 @@ html {
 ÉLÉMENTS
 --------------------------------------------------------- */
 a {
-  color: #7b5647;
+  color: #777777;
 }
 
 a:visited {
-  color: #5c4033;
+  color: #dadada;
 }
 
 a:hover, a:focus, a:active {
-  color: white;
+  color: #191970;
 }
 
 a:focus {
@@ -366,15 +366,15 @@ a:hover, a:active {
 }
 
 .site__footer a {
-  color: #f40b0b;
+  color: #d4d4d4;
 }
 
 .site__footer a:visited {
-  color: #1435eb;
+  color: #575757;
 }
 
 .site__footer a:hover, .site__footer a:focus, .site__footer a:active {
-  color: #19e123;
+  color: white;
 }
 
 .site__footer a:focus {
@@ -386,15 +386,15 @@ a:hover, a:active {
 }
 
 .header__titre a {
-  color: #f06a6a;
+  color: white;
 }
 
 .header__titre a:visited {
-  color: #7a49d4;
+  color: white;
 }
 
 .header__titre a:hover, .header__titre a:focus, .header__titre a:active {
-  color: #8be58f;
+  color: white;
 }
 
 .header__titre a:focus {
@@ -410,7 +410,7 @@ COMPOSANTES
 --------------------------------------------------------- */
 .site__main {
   padding: 10px 15px;
-  background-color: #d5e6f1;
+  background-color: #6e6e6e;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
 }
@@ -422,7 +422,7 @@ COMPOSANTES
 
 .formation__titre {
   font-size: 2rem;
-  color: #ebcac1;
+  color: #d6d6d6;
   margin: 10px 0px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -433,19 +433,24 @@ COMPOSANTES
 }
 
 .formation__cours {
-  background-color: #d1e9ff;
+  background-color: #006faf;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  transition: all 0.3s ease-out;
   padding: 10px;
 }
 
 @media screen and (min-width: 800px) {
   .formation__cours {
     width: 45%;
+  }
+  .formation__cours:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px 1px black;
   }
 }
 
@@ -457,7 +462,7 @@ COMPOSANTES
 
 .cours__titre {
   font-size: 1.5rem;
-  color: #ebcac1;
+  color: #d6d6d6;
   margin: 5px 0px;
 }
 
@@ -472,8 +477,8 @@ COMPOSANTES
 }
 
 .site__header {
-  background-color: #6faee2;
-  color: #fa9292;
+  background-color: #31b3ff;
+  color: white;
   padding-left: 10px;
 }
 
@@ -524,7 +529,7 @@ COMPOSANTES
 }
 
 .menu-item a:hover {
-  background-color: #2832b8;
+  background-color: #003a5c;
 }
 
 @media screen and (min-width: 800px) {
@@ -537,8 +542,11 @@ COMPOSANTES
 }
 
 .site__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #07143b;
+  background-color: #1b394b;
   padding: 15px;
 }
 
@@ -546,6 +554,7 @@ COMPOSANTES
   display: flex;
   list-style-type: none;
   justify-content: center;
+  padding: 0px;
 }
 
 .site__footer__menu__ul .menu-item {
@@ -556,20 +565,25 @@ COMPOSANTES
   display: flex;
   align-items: center;
   padding: 3px;
+  transition: all 0.3s ease-out;
+}
+
+.site__footer__menu__ul .menu-item a:hover {
+  transform: scale(1.1);
 }
 
 .site__footer__menu__ul .menu-item a svg {
-  color: #f40b0b;
+  color: #d4d4d4;
 }
 
 .site__footer__menu__ul .menu-item a:hover svg {
-  color: #19e123;
+  color: white;
 }
 
 .footer__titre,
 .footer__presentation,
 .footer__author {
-  color: #ffcabc;
+  color: #cecece;
   text-align: center;
 }
 
@@ -622,28 +636,28 @@ LAYOUT
 theme name: Lab 2 Lemieux Florence
 */
 .site {
-  background-color: #dae0f1;
+  background-color: #383838;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .site__header {
   grid-area: header;
-  background-color: #6faee2;
+  background-color: #31b3ff;
 }
 
 .site__barre {
   grid-area: sidebar;
-  background-color: #051d29;
+  background-color: white;
 }
 
 .site__main {
   grid-area: main;
-  background-color: #d5e6f1;
+  background-color: #6e6e6e;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #07143b;
+  background-color: #1b394b;
 }
 
 .site {

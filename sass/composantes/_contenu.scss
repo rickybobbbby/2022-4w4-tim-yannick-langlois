@@ -29,8 +29,13 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        transition: all 0.3s ease-out;
         @media screen and (min-width : $largeur__media--tablette){
             width: 45%;
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 5px 5px 15px 1px rgba($color: #000000, $alpha: 1.0);
+            }
         }
         @media screen and (min-width : $largeur__media--desktop){
             width: 30%;
