@@ -1,37 +1,11 @@
 /*
-theme name: Lab 2 Lemieux Florence
+theme name: theme-4w4-yannick-langlois
 */
 
 .site {
-    //background-color: rgb(122, 176, 207);
     background-color: $color__background-body;
     font-family: $font__main;
-}
-
-
-
-.site__header{
-    grid-area: header;  
-    background-color: $color__background-header;
-}
-
-.site__barre{
-    grid-area: sidebar;
-    background-color: $color__background-barre;
-}
-
-.site__main{
-    grid-area: main;
-    background-color: $color__background-main;
-}
-
-.site__footer{
-    grid-area: footer;
-    background-color: $color__background-footer;
-}
-
-.site {
-	display: grid;
+    display: grid;
     gap : 10px;
 	grid-template-columns: auto;
 	grid-template-areas:
@@ -41,15 +15,41 @@ theme name: Lab 2 Lemieux Florence
 		"footer";
 }
 
-@media screen and (min-width : $largeur__media--tablette)
-{
+.site__header{
+    grid-area: header;  
+    background-color: $color__background-header;
+}
+.site__barre{
+    grid-area: sidebar;
+    background-color: $color__background-barre;
+}
+
+.site__main{
+    grid-area: main;
+    background-color: $color__background-main;
+}
+.site__footer{
+    grid-area: footer;
+    background-color: $color__background-footer;
+}
+
+@media screen and (min-width: $largeur__media-tablette) {
     .site {
-        grid-template-columns: ($size__site-barre) auto;
+        grid-template-columns: ($size__site-sidebar) auto;
         grid-template-areas:
             "header header"
-            "sidebar main"
+            "barre main"
             "footer footer";
     }
-}
+}/*fin media query tablette*/
+@media screen and (min-width: $largeur__media-desktop) {
+    .site {
+        grid-template-columns: ($size__site-sidebar) auto;
+        grid-template-areas:
+            "header header"
+            "barre main"
+            "footer footer";
+    }
+} /*fin media query destop*/
 
 

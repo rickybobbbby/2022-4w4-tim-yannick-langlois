@@ -633,11 +633,15 @@ ANIMATION
 LAYOUT
 --------------------------------------------------------- */
 /*
-theme name: Lab 2 Lemieux Florence
+theme name: theme-4w4-yannick-langlois
 */
 .site {
   background-color: #383838;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto;
+  grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 .site__header {
@@ -658,13 +662,6 @@ theme name: Lab 2 Lemieux Florence
 .site__footer {
   grid-area: footer;
   background-color: #1b394b;
-}
-
-.site {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 @media screen and (min-width: 800px) {

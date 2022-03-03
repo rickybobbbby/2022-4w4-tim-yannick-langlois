@@ -1,5 +1,6 @@
-$size__site-barre : 300px;
+/*layout général*/
+$size__site-sidebar: 300px;
 
-/* ------------------------------------- points de rupture des media queries */
-$largeur__media--tablette : 800px;
-$largeur__media--desktop : 1100px;
+/* points de rupture pour les media query */
+$largeur__media-tablette : 700px;
+$largeur__media-desktop : 1000px;
