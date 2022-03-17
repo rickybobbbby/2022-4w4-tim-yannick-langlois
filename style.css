@@ -707,43 +707,87 @@ COMPOSANTES
   justify-content: space-evenly;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #1b394b;
+  color: #cecece;
   padding: 15px;
+  /*&__menu{ // .site__footer__menu
+
+      &__ul{ // .site__footer__menu__ul
+          display : flex;
+          list-style-type: none;
+          justify-content: center;
+          padding: 0px;
+          .menu-item { // .site__footer__menu__ul .menu-item
+              margin : 10px 5px;
+            a{ // .site__footer__menu__ul .menu-item a
+              display : flex;
+              align-items: center;
+              padding : 3px;
+              transition: all 0.3s ease-out;
+              &:hover{
+                transform: scale(1.1);
+              }
+                svg { // .site__footer__menu__ul .menu-item a svg
+                  color: $color__link__footer;
+                }
+           
+              &:hover {
+                svg { // .site__footer__menu__ul .menu-item a svg
+                  color: $color__link__footer-hover;
+                }
+              }
+            }
+          }    
+       }
+    }*/
 }
 
-.site__footer__menu__ul {
+.site__footer__colonne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site__footer__colonne section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  flex: 0 0 30%;
+}
+
+.site__footer__ligne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site__footer__ligne .footer__menu nav ul {
   display: flex;
   list-style-type: none;
   justify-content: center;
+  flex-direction: row;
   padding: 0px;
 }
 
-.site__footer__menu__ul .menu-item {
+.site__footer__ligne .footer__menu nav ul .menu-item {
   margin: 10px 5px;
 }
 
-.site__footer__menu__ul .menu-item a {
+.site__footer__ligne .footer__menu nav ul .menu-item a {
   display: flex;
   align-items: center;
   padding: 3px;
   transition: all 0.3s ease-out;
 }
 
-.site__footer__menu__ul .menu-item a:hover {
-  transform: scale(1.1);
-}
-
-.site__footer__menu__ul .menu-item a svg {
+.site__footer__ligne .footer__menu nav ul .menu-item a svg {
   color: #d4d4d4;
 }
 
-.site__footer__menu__ul .menu-item a:hover svg {
-  color: white;
+.site__footer__ligne .footer__menu nav ul .menu-item a:hover {
+  transform: scale(1.1);
 }
 
-.footer__titre,
-.footer__presentation {
-  color: #cecece;
-  text-align: center;
+.site__footer__ligne .footer__menu nav ul .menu-item a:hover svg {
+  color: white;
 }
 
 /* ---------------------------------------------------------

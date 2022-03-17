@@ -1,12 +1,66 @@
+// --- footer global
 .site__footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-family: $font__titre;
     background-color: $color__background-footer;
+    color : $color__font-footer;
     padding: 15px;
-
-    &__menu{ // .site__footer__menu
+    &__colonne{ // .site__footer__colonne
+      display: flex;
+      justify-content: space-between;
+      section{ // .site__footer__colonne section
+        display: flex;
+        flex-direction: column;
+        border : 1px solid #aaa;
+        flex : 0 0 30%;
+      }
+      .footer__adresse{} // .site__footer__colonne  .footer__adresse
+      .footer__article{}
+      .footer__lien{}
+    }
+    &__ligne{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      section{}
+      .footer__description{}
+      .footer__auteur{}
+      .footer__copyright{}
+      .footer__menu{
+        nav{ // .site__footer__menu
+          ul{ // .site__footer__menu__ul
+            display : flex;
+            list-style-type: none;
+            justify-content: center;
+            flex-direction: row;
+            padding: 0px;
+              .menu-item { // .site__footer__menu__ul .menu-item
+                  margin : 10px 5px;
+                a{ // .site__footer__menu__ul .menu-item a
+                  display : flex;
+                  align-items: center;
+                  padding : 3px;
+                  transition: all 0.3s ease-out;
+                  svg { // .site__footer__menu__ul .menu-item a svg
+                    color: $color__link__footer;
+                  }
+                  &:hover{
+                    transform: scale(1.1);
+                    svg { // .site__footer__menu__ul .menu-item a svg
+                      color: $color__link__footer-hover;
+                    }
+                  }
+                }
+              }    
+           }
+        }
+  
+      }
+      .footer__recherche{}
+    }
+    /*&__menu{ // .site__footer__menu
 
       &__ul{ // .site__footer__menu__ul
           display : flex;
@@ -35,11 +89,6 @@
             }
           }    
        }
-    }
-  }
-
-.footer__titre,
-.footer__presentation {
-  color: $color__font-footer;
-  text-align: center;
+    }*/
 }
+
