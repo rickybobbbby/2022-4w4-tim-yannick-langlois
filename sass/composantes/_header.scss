@@ -4,7 +4,7 @@
   align-items: center;
   background-color: $color__background-header;
   color: $color__font-header;
-
+  box-shadow: 3px 3px #161616;
   @media screen and (min-width: $largeur__media--tablette) {
     flex-direction: row;
     justify-content: space-between;
@@ -14,12 +14,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
     a{
         text-decoration: none;
     }
     @media screen and (min-width: $largeur__media--tablette) {
-        margin: 0 0 0 6em;
+        padding-left: 6em;
         padding-right: 5%;
+        clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+        background-color: $color__background-header;
+    }
+    @media screen and (min-width: $largeur__media--desktop) {
+      padding-right: 15%;
     }
     .header__titre {
       margin: 0.2em 0 0 0;
@@ -35,15 +41,17 @@
       font-family: $font__main;
     }
   }
-
   &__util{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-bottom: 20px;
+    z-index: 1;
+    height: 100%;
     @media screen and (min-width: $largeur__media--tablette) {
         align-items: flex-end;
-        padding-right: 3%;
+        padding-right: 2%;
     }
     .icon{
         display: flex;

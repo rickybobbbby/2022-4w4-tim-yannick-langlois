@@ -16,6 +16,20 @@ theme name: theme-4w4-yannick-langlois
 		"footer";
 }
 
+.site::after{
+    position : fixed;
+    content : "";
+    width : 100%;
+    height : 100%;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
+    background-color:$color__background-body-clip;
+    z-index : -1;
+}
+
 
 
 .site__header{
@@ -30,7 +44,7 @@ theme name: theme-4w4-yannick-langlois
 
 .site__main{
     grid-area: main;
-    background-color: $color__background-main;
+    background-color: rgba($color__background-main,.75);
 }
 
 .site__footer{
@@ -46,6 +60,10 @@ theme name: theme-4w4-yannick-langlois
             "header header"
             "sidebar main"
             "footer footer";
+    }
+    .site__header{
+        grid-area: header;  
+        background-color: $color__background-barre;
     }
 }
 

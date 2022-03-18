@@ -1,16 +1,22 @@
 /* ---------------- BACKGROUND */
-$color__background-main : rgb(202, 202, 202);
-$color__background-body : rgb(110, 110, 110);
-$color__background-header : rgb(49, 179, 255);
+// ---header
+$color__background-header : rgb(255, 83, 83);
+// ---body and main
+$color__background-main : rgb(0, 0, 0);
+$color__background-body : rgb(44, 44, 44);
 $color__background-barre : rgb(255, 255, 255);
+$color__background-body-clip : rgb(255, 83, 83);
+// ---footer
 $color__background-footer : rgb(27, 57, 75);
-$color__background-link : hsl(229, 64%, 70%);
-$color__background-link-hover : rgb(0, 58, 92);
 
 /* ---------------- LIENS */
 $color__link : #363636;
 $color__link-hover : #ffffff;
 $color__link-visited : #9b9b9b;
+$color__main-carte-hover: rgb(207, 207, 207);
+/* ---------------- LIENS background*/
+$color__background-link : hsl(229, 64%, 70%);
+$color__background-link-hover : rgb(0, 58, 92);
 /* ---------------- LIENS FOOTER */
 $color__link__footer : #d4d4d4;
 $color__link__footer-hover : hsl(0, 0%, 100%);
@@ -27,6 +33,5 @@ $color__font-barre : rgb(221, 221, 221);
 $color__font-footer : rgb(206, 206, 206);
 
 /*-------article */
-$color__main-carte-hover: rgb(207, 207, 207);
 $color__background-cours : rgb(255, 255, 255);
 $color__background-cours-hover : rgb(115, 204, 255);
