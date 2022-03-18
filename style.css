@@ -709,36 +709,6 @@ COMPOSANTES
   background-color: #1b394b;
   color: #cecece;
   padding: 15px;
-  /*&__menu{ // .site__footer__menu
-
-      &__ul{ // .site__footer__menu__ul
-          display : flex;
-          list-style-type: none;
-          justify-content: center;
-          padding: 0px;
-          .menu-item { // .site__footer__menu__ul .menu-item
-              margin : 10px 5px;
-            a{ // .site__footer__menu__ul .menu-item a
-              display : flex;
-              align-items: center;
-              padding : 3px;
-              transition: all 0.3s ease-out;
-              &:hover{
-                transform: scale(1.1);
-              }
-                svg { // .site__footer__menu__ul .menu-item a svg
-                  color: $color__link__footer;
-                }
-           
-              &:hover {
-                svg { // .site__footer__menu__ul .menu-item a svg
-                  color: $color__link__footer-hover;
-                }
-              }
-            }
-          }    
-       }
-    }*/
 }
 
 .site__footer__colonne {

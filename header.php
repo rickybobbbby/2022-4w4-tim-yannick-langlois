@@ -17,6 +17,7 @@
 
 <header class="site__header">
     <section class="site__header__titre">
+    <?php the_custom_logo(); ?>
     <h1 class="header__titre">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">    
             <?php bloginfo('name'); ?></h1>
@@ -49,8 +50,6 @@
         </form>
     </section>
 </header>
-
-
 <section class="site__barre">
     <input type="checkbox"  id="chk-burger">
     <label for="chk-burger" id="burger">
