@@ -553,7 +553,7 @@ COMPOSANTES
   fill: #cfcfcf;
 }
 
-.site__header__util .recherche {
+.recherche {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -562,12 +562,12 @@ COMPOSANTES
 }
 
 @media screen and (min-width: 700px) {
-  .site__header__util .recherche {
+  .recherche {
     width: 200px;
   }
 }
 
-.site__header__util .recherche__input {
+.recherche__input {
   color: #000;
   background: rgba(0, 0, 0, 0.2);
   width: 90%;
@@ -580,15 +580,15 @@ COMPOSANTES
   transition: all 0.3s ease-out;
 }
 
-.site__header__util .recherche__input:hover, .site__header__util .recherche__input:not(:placeholder-shown) {
+.recherche__input:hover, .recherche__input:not(:placeholder-shown) {
   background: white;
 }
 
-.site__header__util .recherche__input::placeholder {
+.recherche__input::placeholder {
   color: #292929;
 }
 
-.site__header__util .recherche__bouton {
+.recherche__bouton {
   background-color: #1b394b;
   position: absolute;
   top: 0;
@@ -600,17 +600,17 @@ COMPOSANTES
   transition: all 0.3s ease-out;
 }
 
-.site__header__util .recherche__bouton svg {
+.recherche__bouton svg {
   transition: all 0.3s ease-out;
   opacity: 0%;
 }
 
-.site__header__util input:not(:placeholder-shown) + .recherche__bouton {
+.recherche input:not(:placeholder-shown) + .recherche__bouton {
   padding: 1px 6px;
   max-width: 36px;
 }
 
-.site__header__util input:not(:placeholder-shown) + .recherche__bouton svg {
+.recherche input:not(:placeholder-shown) + .recherche__bouton svg {
   opacity: 100%;
 }
 
