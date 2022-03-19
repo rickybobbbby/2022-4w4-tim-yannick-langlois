@@ -7,7 +7,7 @@ $color__background-body : rgb(44, 44, 44);
 $color__background-barre : rgb(255, 255, 255);
 $color__background-body-clip : rgb(255, 83, 83);
 // ---footer
-$color__background-footer : rgb(27, 57, 75);
+$color__background-footer : rgb(0, 0, 0);
 
 /* ---------------- LIENS */
 $color__link : #363636;
@@ -19,7 +19,7 @@ $color__background-link : hsl(229, 64%, 70%);
 $color__background-link-hover : rgb(0, 58, 92);
 /* ---------------- LIENS FOOTER */
 $color__link__footer : #d4d4d4;
-$color__link__footer-hover : hsl(0, 0%, 100%);
+$color__link__footer-hover : rgb(255, 83, 83);
 $color__link__footer-visited : hsl(0, 0%, 53%);
 /* ---------------- LIENS HEADER titre principal du site */
 $color__link__header : hsl(0, 0%, 0%);
@@ -34,4 +34,4 @@ $color__font-footer : rgb(206, 206, 206);
 
 /*-------article */
 $color__background-cours : rgb(255, 255, 255);
-$color__background-cours-hover : rgb(115, 204, 255);
+$color__background-cours-hover : rgb(255, 83, 83);

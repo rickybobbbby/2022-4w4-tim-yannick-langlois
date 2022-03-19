@@ -13,9 +13,25 @@
       section{ // .site__footer__colonne section
         display: flex;
         flex-direction: column;
-        border : 1px solid #aaa;
-        flex : 0 0 30%;
+        flex : 0 0 33%;
+        text-align: center;
+        ul {
+          padding: 0px;
+          list-style: none;
+        }
+        &:first-child {
+          text-align: left;
+          padding-left: 2%;
+        }
+        &:last-child {
+          text-align: right;
+          padding-right: 2%;
+        }
+        &+ section{ // .site__footer__colonne section
+          border-left: solid 1px white;
+        }
       }
+
       .footer__adresse{} // .site__footer__colonne  .footer__adresse
       .footer__article{}
       .footer__lien{}

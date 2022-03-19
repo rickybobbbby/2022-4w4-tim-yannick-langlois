@@ -377,7 +377,7 @@ a:hover, a:active {
 }
 
 .site__footer a:hover, .site__footer a:focus, .site__footer a:active {
-  color: white;
+  color: #ff5353;
 }
 
 .site__footer a:focus {
@@ -452,7 +452,7 @@ COMPOSANTES
     width: 45%;
   }
   .formation__cours:hover {
-    background-color: #73ccff;
+    background-color: #ff5353;
     transform: scale(1.1);
     box-shadow: 5px 5px 15px 1px black;
   }
@@ -603,7 +603,7 @@ COMPOSANTES
 }
 
 .recherche__bouton {
-  background-color: #1b394b;
+  background-color: black;
   position: absolute;
   top: 0;
   right: 0;
@@ -626,6 +626,27 @@ COMPOSANTES
 
 .recherche input:not(:placeholder-shown) + .recherche__bouton svg {
   opacity: 100%;
+}
+
+.footer__recherche .recherche__input {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 7px;
+  transition: all 0.3s ease-out;
+}
+
+.footer__recherche .recherche__input:hover, .footer__recherche .recherche__input:not(:placeholder-shown) {
+  background: white;
+}
+
+.footer__recherche .recherche__input::placeholder {
+  color: #292929;
 }
 
 #chk-burger {
@@ -720,7 +741,7 @@ COMPOSANTES
   flex-direction: column;
   justify-content: space-evenly;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #1b394b;
+  background-color: black;
   color: #cecece;
   padding: 15px;
 }
@@ -733,8 +754,27 @@ COMPOSANTES
 .site__footer__colonne section {
   display: flex;
   flex-direction: column;
-  border: 1px solid #aaa;
-  flex: 0 0 30%;
+  flex: 0 0 33%;
+  text-align: center;
+}
+
+.site__footer__colonne section ul {
+  padding: 0px;
+  list-style: none;
+}
+
+.site__footer__colonne section:first-child {
+  text-align: left;
+  padding-left: 2%;
+}
+
+.site__footer__colonne section:last-child {
+  text-align: right;
+  padding-right: 2%;
+}
+
+.site__footer__colonne section + section {
+  border-left: solid 1px white;
 }
 
 .site__footer__ligne {
@@ -771,7 +811,7 @@ COMPOSANTES
 }
 
 .site__footer__ligne .footer__menu nav ul .menu-item a:hover svg {
-  color: white;
+  color: #ff5353;
 }
 
 /* ---------------------------------------------------------
@@ -862,7 +902,7 @@ theme name: theme-4w4-yannick-langlois
 
 .site__footer {
   grid-area: footer;
-  background-color: #1b394b;
+  background-color: black;
 }
 
 @media screen and (min-width: 700px) {

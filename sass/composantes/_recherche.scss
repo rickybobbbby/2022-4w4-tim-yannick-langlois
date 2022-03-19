@@ -50,4 +50,24 @@
         }
     }        
 }
+.footer__recherche {
+    .recherche__input{
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.75);
+        width: 90%;
+        height: 30px;
+        border-radius: 5px;
+        appearance: none;
+        outline: none;
+        border: none;
+        padding: 7px;
+        transition: all 0.3s ease-out;
+        &:hover, &:not(:placeholder-shown){
+            background: $color__background-barre;
+        }
+        &::placeholder{
+            color: rgb(41, 41, 41);
+        }
+    } 
+}
 
