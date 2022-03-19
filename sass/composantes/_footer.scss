@@ -13,14 +13,26 @@
       section{ // .site__footer__colonne section
         display: flex;
         flex-direction: column;
-        flex : 0 0 33%;
         text-align: center;
         ul {
           padding: 0px;
           list-style: none;
         }
         h2{
-          font-size: 1em;
+          font-size: 0.7em;
+          padding: 2px;
+        }
+        li{
+          font-size: 0.7em;
+        }
+        @media screen and (min-width: $largeur__media--tablette) {
+          flex : 0 0 30%;
+          h2{
+            font-size: 1em;
+          }
+          li{
+            font-size: 1em;
+          }
         }
         &:first-child {
           text-align: left;

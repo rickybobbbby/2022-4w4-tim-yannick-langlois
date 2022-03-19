@@ -610,7 +610,7 @@ COMPOSANTES
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 300px;
+  width: 250px;
 }
 
 @media screen and (min-width: 700px) {
@@ -792,7 +792,6 @@ COMPOSANTES
 .site__footer__colonne section {
   display: flex;
   flex-direction: column;
-  flex: 0 0 33%;
   text-align: center;
 }
 
@@ -802,7 +801,24 @@ COMPOSANTES
 }
 
 .site__footer__colonne section h2 {
-  font-size: 1em;
+  font-size: 0.7em;
+  padding: 2px;
+}
+
+.site__footer__colonne section li {
+  font-size: 0.7em;
+}
+
+@media screen and (min-width: 700px) {
+  .site__footer__colonne section {
+    flex: 0 0 30%;
+  }
+  .site__footer__colonne section h2 {
+    font-size: 1em;
+  }
+  .site__footer__colonne section li {
+    font-size: 1em;
+  }
 }
 
 .site__footer__colonne section:first-child {
