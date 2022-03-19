@@ -14,11 +14,24 @@
                         $descCours = get_the_excerpt();
                         ?>
                         <?php the_post_thumbnail('thumbnail'); ?>
-                        <h3 class="cours__titre"> <?= $titreFiltreCours; ?></h3>
-                        <div class="cours__nbre-heure"><?= $nbHeures; ?></div>
-                        <p class="cours__sigle"><?= $sigleCours; ?> </p>
-                        <p class="cours__desc"> <?= $descCours; ?></p>
-                        <?php get_permalink(); ?>
+
+                        <div class="formation__cours__affiche">
+                            <h3 class="cours__titre"><?= $titreFiltreCours; ?></h3>
+                            <p class="cours__sigle"><?= $sigleCours; ?> </p>
+                            <?php get_permalink(); ?>
+                        </div>
+
+                        <div class="formation__cours__description">
+                            <h3 class="cours__titre">  
+                                <a href="<?php echo get_permalink(); ?>">
+                                    <?= $titreFiltreCours; ?>
+                                </a>
+                            </h3>
+                            <div class="cours__nbre-heure"><?= $nbHeures; ?></div>
+                            <p class="cours__sigle"><?= $sigleCours; ?> </p>
+                            <p class="cours__desc"> <?= $descCours; ?></p>
+                            <?php get_permalink(); ?>
+                        </div>
                     </article>
                 <?php endwhile ?>
                 <?php endif ?>

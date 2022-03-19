@@ -19,29 +19,57 @@
     &__liste {
         display: flex;
         flex-wrap: wrap;
+        a{
+            text-decoration: none;
+        }
     }
-    
     &__cours {
-        background-color: $color__background-cours;
         box-shadow: rgb(57, 64, 68) 1px -1px 10px;
         border-radius: 15px;
         margin: 10px;
         display: flex;
         flex-direction: column;
         width: 100%;
+        overflow: hidden;
+        position: relative;
         transition: all 0.3s ease-out;
+        &__affiche{
+            position: absolute;
+            width: 100%;
+            height:100%;
+            background-color: $color__background-cours;
+            padding: 10px;
+        }
+        &__description{
+            width: 100%;
+            height:100%;
+            background-color: $color__background-cours-hover;
+            transition: all .7s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            clip-path: circle(0% at 100% 100%);
+            padding: 10px;
+        }
+        &:hover .formation__cours__description{
+            left:0px;
+            transition: all .7s ease-in-out;
+            clip-path: circle(75%);
+        }
+        &:hover{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            background-color: $color__background-cours-hover;
+            box-shadow: 5px 5px 15px 1px rgba($color: #000000, $alpha: 1.0);
+            z-index: 1;
+        }
         @media screen and (min-width : $largeur__media--tablette){
             width: 45%;
-            &:hover {
-                background-color: $color__background-cours-hover;
+            &:hover{
                 transform: scale(1.1);
-                box-shadow: 5px 5px 15px 1px rgba($color: #000000, $alpha: 1.0);
             }
         }
         @media screen and (min-width : $largeur__media--desktop){
             width: 30%;
         }
-        padding: 10px;
     }
 
 

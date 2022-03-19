@@ -9,6 +9,10 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 Text Domain: cidw-4w4
 */
+* {
+  outline: 1px solid #0900ff !important;
+}
+
 /* ---------------------------------------------------------
 VARIABLES
 --------------------------------------------------------- */
@@ -435,16 +439,52 @@ COMPOSANTES
   flex-wrap: wrap;
 }
 
+.formation__liste a {
+  text-decoration: none;
+}
+
 .formation__cours {
-  background-color: white;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 15px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
+  position: relative;
   transition: all 0.3s ease-out;
+}
+
+.formation__cours__affiche {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
   padding: 10px;
+}
+
+.formation__cours__description {
+  width: 100%;
+  height: 100%;
+  background-color: #ff5353;
+  transition: all .7s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
+  padding: 10px;
+}
+
+.formation__cours:hover .formation__cours__description {
+  left: 0px;
+  transition: all .7s ease-in-out;
+  clip-path: circle(75%);
+}
+
+.formation__cours:hover {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  background-color: #ff5353;
+  box-shadow: 5px 5px 15px 1px black;
+  z-index: 1;
 }
 
 @media screen and (min-width: 700px) {
@@ -452,9 +492,7 @@ COMPOSANTES
     width: 45%;
   }
   .formation__cours:hover {
-    background-color: #ff5353;
     transform: scale(1.1);
-    box-shadow: 5px 5px 15px 1px black;
   }
 }
 
@@ -486,7 +524,7 @@ COMPOSANTES
   align-items: center;
   background-color: #ff5353;
   color: white;
-  box-shadow: 3px 3px #161616;
+  border-bottom: solid 1px #2b2b2b;
 }
 
 @media screen and (min-width: 700px) {
@@ -610,7 +648,7 @@ COMPOSANTES
   border-radius: 0px 5px 5px 0px;
   border: none;
   padding: 0px 0px;
-  max-width: 0px;
+  width: 0px;
   transition: all 0.3s ease-out;
 }
 
@@ -621,7 +659,7 @@ COMPOSANTES
 
 .recherche input:not(:placeholder-shown) + .recherche__bouton {
   padding: 1px 6px;
-  max-width: 36px;
+  width: 36px;
 }
 
 .recherche input:not(:placeholder-shown) + .recherche__bouton svg {
@@ -723,7 +761,7 @@ COMPOSANTES
 }
 
 .menu-principal-container .menu-item a:hover {
-  background-color: #003a5c;
+  background-color: #2b2b2b;
 }
 
 @media screen and (min-width: 700px) {
@@ -761,6 +799,10 @@ COMPOSANTES
 .site__footer__colonne section ul {
   padding: 0px;
   list-style: none;
+}
+
+.site__footer__colonne section h2 {
+  font-size: 1em;
 }
 
 .site__footer__colonne section:first-child {

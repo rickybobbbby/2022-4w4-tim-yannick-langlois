@@ -33,7 +33,7 @@
         border-radius: 0px 5px 5px 0px;
         border: none;
         padding: 0px 0px;
-        max-width: 0px;
+        width: 0px;
         transition: all 0.3s ease-out;
         svg {
             transition: all 0.3s ease-out;
@@ -43,7 +43,7 @@
     input:not(:placeholder-shown) {
         + .recherche__bouton {
             padding: 1px 6px;
-            max-width: 36px;
+            width: 36px;
             svg {
                 opacity: 100%;
             }
