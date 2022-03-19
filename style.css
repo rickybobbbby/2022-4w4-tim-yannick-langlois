@@ -783,6 +783,10 @@ COMPOSANTES
   align-items: center;
 }
 
+.site__footer__ligne .footer__description, .site__footer__ligne .footer__auteur, .site__footer__ligne .footer__copyright {
+  font-size: 0.7rem;
+}
+
 .site__footer__ligne .footer__menu nav ul {
   display: flex;
   list-style-type: none;
@@ -812,6 +816,10 @@ COMPOSANTES
 
 .site__footer__ligne .footer__menu nav ul .menu-item a:hover svg {
   color: #ff5353;
+}
+
+.site__footer__ligne .footer__recherche {
+  padding-bottom: 2%;
 }
 
 /* ---------------------------------------------------------

@@ -41,9 +41,9 @@
       flex-direction: column;
       align-items: center;
       section{}
-      .footer__description{}
-      .footer__auteur{}
-      .footer__copyright{}
+      .footer__description, .footer__auteur, .footer__copyright{
+        font-size: 0.7rem;
+      }
       .footer__menu{
         nav{ // .site__footer__menu
           ul{ // .site__footer__menu__ul
@@ -74,7 +74,9 @@
         }
   
       }
-      .footer__recherche{}
+      .footer__recherche{
+        padding-bottom: 2%;
+      }
     }
 }
 
