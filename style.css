@@ -16,6 +16,7 @@ Text Domain: cidw-4w4
 /* ---------------------------------------------------------
 VARIABLES
 --------------------------------------------------------- */
+/*---------------- COULEUR PRINCIPAL */
 /* ---------------- BACKGROUND */
 /* ---------------- LIENS */
 /* ---------------- LIENS background*/
@@ -353,15 +354,15 @@ html {
 ÉLÉMENTS
 --------------------------------------------------------- */
 a {
-  color: #363636;
+  color: #2c2c2c;
 }
 
 a:visited {
-  color: #9b9b9b;
+  color: #878787;
 }
 
 a:hover, a:focus, a:active {
-  color: #ffffff;
+  color: white;
 }
 
 a:focus {
@@ -505,7 +506,7 @@ COMPOSANTES
 
 .cours__titre {
   font-size: 1.5rem;
-  color: #292929;
+  color: black;
   margin: 5px 0px;
 }
 
@@ -595,6 +596,26 @@ COMPOSANTES
   .single__cours .single__cours__contenu:hover .single__cours__image img {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
+}
+
+.page__standard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page__standard__titre {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.page__standard__contenu {
+  color: white;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-left: 15px;
 }
 
 .site__header {
@@ -840,7 +861,7 @@ COMPOSANTES
 }
 
 .menu-principal-container .menu-item a:hover {
-  background-color: #2b2b2b;
+  background-color: #2c2c2c;
 }
 
 @media screen and (min-width: 700px) {
