@@ -180,15 +180,39 @@
     &__titre{
         background-color: white;
         width: 100%;
-        padding-bottom: 15px;
-        padding-left: 15px;
+        padding: 15px;
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 79%);
     }
     &__contenu{
         color: $color__principal__blanc;
         width: 100%;
-        padding-bottom: 15px;
-        padding-left: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        a{
+            color: $color__principal__blanc;
+        }
     }
     @media screen and (min-width : $largeur__media--desktop){
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        &__titre{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            clip-path: polygon(100% 0, 0 0, 0 100%, 53% 100%);
+            font-size: 2em;
+        }
+        &__contenu{
+            color: $color__principal__blanc;
+            width: 100%;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+        }
     }
-}          
+}
