@@ -374,7 +374,7 @@ a:hover, a:active {
 }
 
 .site__footer a {
-  color: #d4d4d4;
+  color: #cfcfcf;
 }
 
 .site__footer a:visited {
@@ -880,7 +880,7 @@ COMPOSANTES
   justify-content: space-evenly;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: black;
-  color: #cecece;
+  color: #cfcfcf;
   padding: 15px;
 }
 
@@ -965,7 +965,7 @@ COMPOSANTES
 }
 
 .site__footer__ligne .footer__menu nav ul .menu-item a svg {
-  color: #d4d4d4;
+  color: #cfcfcf;
 }
 
 .site__footer__ligne .footer__menu nav ul .menu-item a:hover {

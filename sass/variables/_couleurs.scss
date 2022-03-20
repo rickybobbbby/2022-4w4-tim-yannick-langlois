@@ -3,7 +3,8 @@ $color__principal__blanc : rgb(255, 255, 255);
 $color__principal__noir :  rgb(0, 0, 0);
 $color__principal__coloration : #ff5353;
 $color__principal__nuancer : rgb(44, 44, 44);
-$color__principal__nuancer__pale : hsl(0, 0%, 53%);
+$color__principal__nuancer__gris : hsl(0, 0%, 53%);
+$color__principal__nuancer__pale : rgb(207, 207, 207);
 
 /* ---------------- BACKGROUND */
 // ---header
@@ -19,15 +20,15 @@ $color__background-footer : $color__principal__noir;
 /* ---------------- LIENS */
 $color__link : $color__principal__nuancer;
 $color__link-hover : $color__principal__blanc;
-$color__link-visited : $color__principal__nuancer__pale;
-$color__main-carte-hover: rgb(207, 207, 207);
+$color__link-visited : $color__principal__nuancer__gris;
+$color__main-carte-hover: $color__principal__nuancer__pale;
 /* ---------------- LIENS background*/
 $color__background-link : $color__principal__blanc;
 $color__background-link-hover : $color__principal__nuancer;
 /* ---------------- LIENS FOOTER */
-$color__link__footer : #d4d4d4;
+$color__link__footer : $color__principal__nuancer__pale;
 $color__link__footer-hover : $color__principal__coloration;
-$color__link__footer-visited : $color__principal__nuancer__pale;
+$color__link__footer-visited : $color__principal__nuancer__gris;
 /* ---------------- LIENS HEADER titre principal du site */
 $color__link__header : $color__principal__noir;
 $color__link__header-hover : $color__principal__blanc;
@@ -36,8 +37,8 @@ $color__link__header-visited : $color__principal__noir;
 /* ---------------- FONT */
 $color__font-header : $color__principal__blanc;
 $color__font-main : $color__principal__noir;
-$color__font-barre : rgb(221, 221, 221);
-$color__font-footer : rgb(206, 206, 206);
+$color__font-barre : $color__principal__nuancer__pale;
+$color__font-footer : $color__principal__nuancer__pale;
 
 /*-------article */
 $color__background-cours : $color__principal__blanc;
