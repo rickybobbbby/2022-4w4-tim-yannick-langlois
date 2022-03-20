@@ -416,10 +416,11 @@ a:hover, a:active {
 COMPOSANTES
 --------------------------------------------------------- */
 .site__main {
-  padding: 10px 15px;
+  margin: 10px 15px;
   background-color: black;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
+  overflow: hidden;
 }
 
 .formation {
@@ -516,6 +517,84 @@ COMPOSANTES
 
 .cours__description {
   font-size: 1rem;
+}
+
+.single__cours {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+
+.single__cours .single__cours__intro {
+  width: 100%;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.single__cours .single__cours__contenu {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: all .7s ease-in-out;
+  background-color: white;
+}
+
+.single__cours .single__cours__contenu .single__cours__image {
+  width: 100%;
+  position: absolute;
+}
+
+.single__cours .single__cours__contenu .single__cours__image img {
+  transition: all .7s ease-in-out;
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.single__cours .single__cours__contenu .single__cours__description {
+  padding: 15px;
+  color: #ff5353;
+}
+
+.single__cours .single__cours__contenu .single__cours__description p {
+  transition: all .7s ease-in-out;
+  opacity: 0%;
+}
+
+.single__cours .single__cours__contenu:hover .single__cours__image img {
+  width: 100%;
+  height: 0%;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.single__cours .single__cours__contenu:hover .single__cours__description {
+  color: #2c2c2c;
+}
+
+.single__cours .single__cours__contenu:hover .single__cours__description p {
+  opacity: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .single__cours {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    color: black;
+  }
+  .single__cours .single__cours__intro {
+    width: 50%;
+    padding: 15px;
+    background-color: #ff5353;
+  }
+  .single__cours .single__cours__contenu .single__cours__image img {
+    clip-path: polygon(100% 0, 32% 0, 0 100%, 100% 100%);
+  }
+  .single__cours .single__cours__contenu:hover .single__cours__image img {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
 }
 
 .site__header {

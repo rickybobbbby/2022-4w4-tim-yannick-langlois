@@ -13,7 +13,6 @@
                         $sigleCours = substr($titre, 0, 7);
                         $descCours = get_the_excerpt();
                         ?>
-                        <?php the_post_thumbnail('thumbnail'); ?>
 
                         <div class="formation__cours__affiche">
                             <h3 class="cours__titre"><?= $titreFiltreCours; ?></h3>
