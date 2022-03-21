@@ -647,6 +647,88 @@ COMPOSANTES
   }
 }
 
+.carousel {
+  color: white;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.carousel .carousel__list {
+  position: relative;
+  height: 100%;
+  transition: transform .7s ease-in-out;
+}
+
+.carousel .carousel__list__slide {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 300px;
+}
+
+.carousel .carousel__list__slide__image {
+  height: 50%;
+}
+
+.carousel .carousel__list__slide__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 68%, 0 100%);
+}
+
+.carousel .carousel__list__slide__message {
+  padding: 15px;
+}
+
+.carousel .carousel__list__slide__message h2 {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 1000px) {
+  .carousel .carousel__list__slide {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .carousel .carousel__list__slide__image {
+    width: 70%;
+  }
+  .carousel .carousel__list__slide__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    clip-path: polygon(0 0, 80% 0%, 40% 100%, 0% 100%);
+  }
+  .carousel .carousel__list__slide__message {
+    width: 30%;
+  }
+  .carousel .carousel__list__slide__message h2 {
+    font-size: 2em;
+  }
+}
+
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel__nav .carousel__indicateur {
+  margin: 15px;
+  padding: 15px;
+  border: 0;
+  border-radius: 10%;
+  animation: joie 2s infinite ease-in-out;
+  background-color: #ff5353;
+}
+
+.carousel__nav .carousel__indicateur.slide-Active {
+  background-color: white;
+}
+
 .site__header {
   display: flex;
   flex-direction: column;
@@ -1058,6 +1140,22 @@ ANIMATION
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/*animation */
+@keyframes joie {
+  40% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  55% {
+    transform: rotate(0deg);
   }
 }
 

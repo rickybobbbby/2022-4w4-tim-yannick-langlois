@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,cAAc;AACd,UAAU,CAAV,IAAU;EACN,GAAG;IACC,SAAS,EAAE,YAAY;;EAG3B,GAAG;IACC,SAAS,EAAE,YAAY;;EAG3B,GAAG;IACC,SAAS,EAAE,aAAa;;EAG5B,GAAG;IACC,SAAS,EAAE,YAAY",
+    "sources": [
+        "animation/boutton.scss"
+    ],
+    "names": [],
+    "file": "boutton.css"
+}

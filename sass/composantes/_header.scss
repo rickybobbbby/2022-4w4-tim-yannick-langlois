@@ -16,8 +16,9 @@
     align-items: center;
     z-index: 1;
     a{
-        text-decoration: none;
+      text-decoration: none;
     }
+    
     @media screen and (min-width: $largeur__media--tablette) {
         padding-left: 6em;
         padding-right: 5%;

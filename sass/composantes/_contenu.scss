@@ -216,3 +216,73 @@
         }
     }
 }
+//front-page.php
+.carousel {
+    color: white;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    .carousel__list{
+        position: relative;
+        height: 100%;
+        transition: transform .7s ease-in-out;;
+        &__slide{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 300px;
+            &__image{
+                height: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    clip-path: polygon(0 0, 100% 0, 100% 68%, 0 100%);
+                }
+            }
+            &__message{
+                padding: 15px;
+                h2{
+                    font-size: 1em;
+                }
+            }
+            @media screen and (min-width : $largeur__media--desktop){
+                flex-direction: row;
+                justify-content: space-between;
+                &__image{
+                    width: 70%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        clip-path: polygon(0 0, 80% 0%, 40% 100%, 0% 100%);
+                    }
+                }
+                &__message{
+                    width: 30%;
+                    h2{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }   
+}
+.carousel__nav{
+    display: flex;
+    justify-content: center;
+    .carousel__indicateur{
+        margin: 15px;
+        padding: 15px;
+        border: 0;
+        border-radius: 10%;
+        animation: joie 2s infinite ease-in-out;
+        background-color: $color__principal__coloration;
+        &.slide-Active{
+            background-color: $color__principal__blanc;
+        }
+    }
+}

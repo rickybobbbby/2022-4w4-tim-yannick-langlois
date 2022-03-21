@@ -100,4 +100,6 @@ function my_register_sidebars() {
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 
+//ajout reference au script
+wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/carousel.js');
 ?>
