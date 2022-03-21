@@ -1,3 +1,11 @@
+@mixin texte_article {
+  font-size: 0.7em;
+  @media screen and (min-width: $largeur__media--tablette){
+    font-size: 1em;
+  }
+}
+
+
 // --- footer global
 .site__footer {
     display: flex;
@@ -19,20 +27,14 @@
           list-style: none;
         }
         h2{
-          font-size: 0.7em;
+          @include texte_article;
           padding: 2px;
         }
         li{
-          font-size: 0.7em;
+          @include texte_article;
         }
         @media screen and (min-width: $largeur__media--tablette) {
           flex : 0 0 30%;
-          h2{
-            font-size: 1em;
-          }
-          li{
-            font-size: 1em;
-          }
         }
         &:first-child {
           text-align: left;
@@ -46,16 +48,11 @@
           border-left: solid 1px white;
         }
       }
-
-      .footer__adresse{} // .site__footer__colonne  .footer__adresse
-      .footer__article{}
-      .footer__lien{}
     }
     &__ligne{
       display:flex;
       flex-direction: column;
       align-items: center;
-      section{}
       .footer__description, .footer__auteur, .footer__copyright{
         font-size: 0.7rem;
       }

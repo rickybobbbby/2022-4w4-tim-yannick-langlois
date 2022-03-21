@@ -1,3 +1,11 @@
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
 .site__main {
     
     margin: 10px 15px;
@@ -8,9 +16,7 @@
 }
 //list cours
 .formation {
-    display: flex;
-    flex-direction: column;
-
+    @include flexColumn;
     &__titre {
         font-size: 2rem;
         color: $color__font-header;
@@ -28,8 +34,7 @@
         box-shadow: rgb(57, 64, 68) 1px -1px 10px;
         border-radius: 15px;
         margin: 10px;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -92,8 +97,7 @@
 }
 // single post.php
 .single__cours {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     width: 100%;
     color: white;
     .single__cours__intro {
@@ -146,8 +150,7 @@
         }
     }
     @media screen and (min-width : $largeur__media--desktop){
-        display: flex;
-        flex-direction: row;
+        @include flexRow;
         height: 100%;
         color: rgb(0, 0, 0);
         .single__cours__intro {
@@ -174,8 +177,7 @@
 }
 // page.php
 .page__standard {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     width: 100%;
     &__titre{
         background-color: white;
@@ -187,8 +189,7 @@
         color: $color__principal__blanc;
         width: 100%;
         padding: 20px;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         justify-content: space-evenly;
 
         a{
@@ -196,12 +197,10 @@
         }
     }
     @media screen and (min-width : $largeur__media--desktop){
-        display: flex;
-        flex-direction: row;
+        @include flexRow;
         height: 100%;
         &__titre{
-            display: flex;
-            flex-direction: column;
+            @include flexColumn;
             justify-content: center;
             clip-path: polygon(100% 0, 0 0, 0 100%, 53% 100%);
             font-size: 2em;
@@ -211,8 +210,7 @@
             width: 100%;
             padding-bottom: 15px;
             padding-left: 15px;
-            display: flex;
-            flex-direction: column;
+            @include flexColumn;
         }
     }
 }
@@ -227,8 +225,7 @@
         height: 100%;
         transition: transform .7s ease-in-out;;
         &__slide{
-            display: flex;
-            flex-direction: column;
+            @include flexColumn;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -250,7 +247,7 @@
                 }
             }
             @media screen and (min-width : $largeur__media--desktop){
-                flex-direction: row;
+                @include flexRow;
                 justify-content: space-between;
                 &__image{
                     width: 70%;
@@ -272,7 +269,7 @@
     }   
 }
 .carousel__nav{
-    display: flex;
+    @include flexRow;
     justify-content: center;
     .carousel__indicateur{
         margin: 15px;
