@@ -8,6 +8,12 @@ Cet realisation plus avancer d'un thème Wordpress. Voici la structure utilisée
 -Les fonctions du thème se trouvent dans «functions.php»
 -Les modèle principal est : «index.php»
 
+description:
+un style simple qui montre l'utilisation pouser de transition
+combiner a plusieur clip-path pour construire un site semi reactif.
+Du java script que j'ai developper dans l'annee d'avant est utiliser
+pour ramener un carousel purement javascript.
+
 commantaire:
 >tous les contenu de page son styliser dans _contenu.scss
 >l'acceuil a un carousel construis sur les page present dans la database
