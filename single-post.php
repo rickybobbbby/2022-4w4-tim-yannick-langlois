@@ -5,9 +5,9 @@
           <?php
           
           $titre = get_the_title();
-          $titreFiltreCours = substr($titre, 7, -6);
-          $nbHeures = substr($titre, -6);
-          $sigleCours = substr($titre, 0, 7);
+          $titreFiltreCours = mb_substr($titre, 4, -6);
+          $nbHeures = mb_substr($titre, -6);
+          $sigleCours = mb_substr($titre, 0, 3);
           ?>
 
           <article class="single__cours">

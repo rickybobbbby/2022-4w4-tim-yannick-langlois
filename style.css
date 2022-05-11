@@ -421,7 +421,6 @@ h1, h2 {
 
 h3, h4 {
   font-family: "Poppins", sans-serif;
-  color: white;
 }
 
 h5, h6 {
@@ -430,7 +429,6 @@ h5, h6 {
 
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: white;
 }
 
 h1 {
@@ -824,6 +822,19 @@ COMPOSANTES
   text-decoration: none;
 }
 
+.site__header__titre .custom-logo-link {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  opacity: 20%;
+  z-index: -1;
+}
+
+.site__header__titre .custom-logo-link img {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 700px) {
   .site__header__titre {
     padding-left: 6em;
@@ -1052,29 +1063,144 @@ COMPOSANTES
   }
 }
 
-.menu-categorie_cours-container .order {
-  display: flex;
-  color: white;
-  background-color: black;
-}
-
 .menu-categorie_cours-container .menu {
-  max-width: 100%;
   display: flex;
   list-style-type: none;
   justify-content: space-around;
-  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  display: flex;
+  width: 10%;
+  min-width: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+  background-color: #ff5353;
+  border-radius: 15px;
 }
 
 .menu-categorie_cours-container .menu .menu-item a {
   color: white;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  margin-top: 10px;
   text-decoration: none;
+  transition: all .7s ease-in-out;
 }
 
-.menu-categorie_cours-container .menu .current-menu-item a {
-  color: white;
+.menu-categorie_cours-container .menu .menu-item .menu-item-description {
+  font-size: 0px;
+  text-align: center;
+  padding: 5px;
+  transition: all .7s ease-in-out;
+}
+
+.menu-categorie_cours-container .menu .menu-item:hover {
   background-color: black;
+}
+
+.menu-categorie_cours-container .menu .menu-item:hover .menu-item-description {
+  font-size: clamp(0.5rem, 0.5vw, 1rem);
+  text-align: center;
+  padding: 5px;
+}
+
+@media screen and (min-width: 700px) {
+  .menu-categorie_cours-container .menu .menu-item {
+    width: 20%;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menu-categorie_cours-container .menu .menu-item {
+    width: 10%;
+    height: 100px;
+  }
+}
+
+.menu-accueil-container .menu, .menu-evenement-container .menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-evenement-container .menu .accueil__cours .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
+}
+
+.menu-accueil-container .menu .accueil__prof .menu-item-icone, .menu-evenement-container .menu .accueil__prof .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
+}
+
+.menu-accueil-container .menu .accueil__aide .menu-item-icone, .menu-evenement-container .menu .accueil__aide .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
+}
+
+.menu-accueil-container .menu .accueil__etudiant .menu-item-icone, .menu-evenement-container .menu .accueil__etudiant .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+}
+
+.menu-accueil-container .menu .menu-item, .menu-evenement-container .menu .menu-item {
+  display: flex;
+  width: 20%;
+  height: 175px;
+  min-width: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+  background-color: #ff5353;
+  border-radius: 5px;
+}
+
+.menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: clamp(1rem, 2vw, 3rem);
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all .7s ease-in-out;
+}
+
+.menu-accueil-container .menu .menu-item a .menu-item-description, .menu-evenement-container .menu .menu-item a .menu-item-description {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.menu-accueil-container .menu .menu-item a .menu-item-icone, .menu-evenement-container .menu .menu-item a .menu-item-icone {
+  width: 0px;
+  height: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all .7s ease-in-out;
+}
+
+.menu-accueil-container .menu .menu-item a:hover .menu-item-icone, .menu-evenement-container .menu .menu-item a:hover .menu-item-icone {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .site__footer {

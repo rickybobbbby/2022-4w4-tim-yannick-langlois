@@ -1,0 +1,71 @@
+.menu-accueil-container, .menu-evenement-container{ //nav
+
+    .menu{//ul
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .accueil__cours .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
+        }
+        .accueil__prof  .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
+        }
+        .accueil__aide .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");          
+        }
+        .accueil__etudiant .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+        }
+        .menu-item{//li
+            display: flex;
+            width: 20%;
+            height : 175px;
+            min-width: 150px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 5px;
+            background-color: $color__principal__coloration;
+            border-radius: 5px;
+            a{ //a
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                height: 100%;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: clamp(1rem, 2vw, 3rem);
+                margin-top: 10px;
+                text-decoration: none;
+                transition: all .7s ease-in-out;
+                .menu-item-description{ //span
+                    font-size: 0.8rem;
+                    text-align: center;
+                    padding: 5px;
+                }
+                .menu-item-icone {
+                    width : 0px;
+                    height : 0px;
+                    margin-top : 0px;
+                    margin-bottom: 10px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    transition: all .7s ease-in-out;
+                }
+                &:hover{
+                    .menu-item-icone {
+                        width : 2rem;
+                        height : 2rem;
+                        margin-top : 10px;
+                        margin-bottom: 10px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }  
+        }
+    }
+} // .menu-accueil-container

@@ -1,0 +1,54 @@
+.menu-categorie_cours-container{ //nav
+    .menu{//ul
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .menu-item{//li
+            display: flex;
+            width: 10%;
+            min-width: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 5px;
+            background-color: $color__principal__coloration;
+            border-radius: 15px;
+            a{ //a
+                color: $couleur__bouton__current;
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: clamp(1rem, 1.5vw, 3rem);
+                margin-top: 10px;
+                text-decoration: none;
+                transition: all .7s ease-in-out;
+            }
+            .menu-item-description{ //span
+                font-size: 0px;
+                text-align: center;
+                padding: 5px;
+                transition: all .7s ease-in-out;
+            } 
+            &:hover{
+                background-color: $couleur__bouton__background--current;
+                .menu-item-description{ //span
+                    font-size: clamp(0.5rem, 0.5vw, 1rem);
+                    text-align: center;
+                    padding: 5px;
+                }
+            }
+            @media screen and (min-width : $largeur__media--tablette){
+                width: 20%;
+                height: 100px;
+            }
+            @media screen and (min-width : $largeur__media--desktop){
+                width: 10%;
+                height: 100px;
+            }
+        }
+    }
+}
