@@ -36,6 +36,7 @@ $color__link__header-visited : $color__principal__noir;
 
 /* ---------------- FONT */
 $color__font-header : $color__principal__blanc;
+$color__font-Titre-main : $color__principal__blanc;
 $color__font-main : $color__principal__noir;
 $color__font-barre : $color__principal__nuancer__pale;
 $color__font-footer : $color__principal__nuancer__pale;
@@ -43,3 +44,13 @@ $color__font-footer : $color__principal__nuancer__pale;
 /*-------article */
 $color__background-cours : $color__principal__blanc;
 $color__background-cours-hover : $color__principal__coloration;
+
+/*-------couleur boutton */
+$couleur__bouton__current : $color__principal__blanc;
+$couleur__bouton__background--current : $color__principal__noir;
+
+/*-------couleur texte-------*/
+$couleur__titre__principale : $color__principal__blanc;
+$couleur__titre__secondaire : $color__principal__blanc;
+$couleur__titre__ternaire : $color__principal__blanc;
+$couleur__paragraphe : $color__principal__blanc;

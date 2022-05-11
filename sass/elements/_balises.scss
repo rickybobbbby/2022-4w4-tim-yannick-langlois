@@ -1,0 +1,39 @@
+h1,h2{
+    font-family: $police__h1;
+    color: $couleur__titre__principale;
+}
+h3,h4{
+    font-family: $police__h3;
+    color: $couleur__titre__secondaire;
+}   
+h5,h6{
+    color: $couleur__titre__ternaire;
+}
+
+p{
+    font-family: $police__p;
+    color: $couleur__paragraphe;
+}
+
+h1{
+    font-size: clamp(2rem, 3vw, 5rem);
+}
+h2{
+    font-size: clamp(1.5rem, 2.2vw, 3rem);
+}
+h3{
+    font-size: clamp(1.2rem, 2vw, 2.6rem);
+}
+h4{
+    font-size: clamp(1.1rem, 2vw, 2.5rem);
+}
+h5{
+    font-size: clamp(1rem, 2vw, 2.2rem);
+}
+h6{
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+p{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}

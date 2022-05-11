@@ -9,10 +9,9 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 Text Domain: cidw-4w4
 */
-* {
-  outline: 1px solid #0900ff !important;
+/** {
+    outline: 1px solid #0900ff !important;
 }
-
 /* ---------------------------------------------------------
 VARIABLES
 --------------------------------------------------------- */
@@ -24,6 +23,8 @@ VARIABLES
 /* ---------------- LIENS HEADER titre principal du site */
 /* ---------------- FONT */
 /*-------article */
+/*-------couleur boutton */
+/*-------couleur texte-------*/
 /*layout général*/
 /* points de rupture pour les media query */
 /* ---------------------------------------------------------
@@ -413,6 +414,53 @@ a:hover, a:active {
   outline: 0;
 }
 
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+h3, h4 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+h5, h6 {
+  color: white;
+}
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.2vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 2.6rem);
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 2.5rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 2vw, 2.2rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -422,6 +470,10 @@ COMPOSANTES
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
   overflow: hidden;
+}
+
+.principal h1 {
+  color: white;
 }
 
 .formation {
@@ -445,7 +497,7 @@ COMPOSANTES
   text-decoration: none;
 }
 
-.formation__cours {
+.formation__liste .formation__cours {
   box-shadow: #394044 1px -1px 10px;
   border-radius: 15px;
   margin: 10px;
@@ -457,15 +509,28 @@ COMPOSANTES
   transition: all 0.3s ease-out;
 }
 
-.formation__cours__affiche {
+.formation__liste .formation__cours__affiche {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: white;
-  padding: 10px;
 }
 
-.formation__cours__description {
+.formation__liste .formation__cours__affiche img {
+  opacity: 20%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.formation__liste .formation__cours__affiche h3, .formation__liste .formation__cours__affiche p {
+  padding: 10px;
+  z-index: 2;
+}
+
+.formation__liste .formation__cours__description {
   width: 100%;
   height: 100%;
   background-color: #ff5353;
@@ -476,13 +541,13 @@ COMPOSANTES
   padding: 10px;
 }
 
-.formation__cours:hover .formation__cours__description {
+.formation__liste .formation__cours:hover .formation__cours__description {
   left: 0px;
   transition: all .7s ease-in-out;
   clip-path: circle(75%);
 }
 
-.formation__cours:hover {
+.formation__liste .formation__cours:hover {
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   background-color: #ff5353;
   box-shadow: 5px 5px 15px 1px black;
@@ -490,16 +555,16 @@ COMPOSANTES
 }
 
 @media screen and (min-width: 700px) {
-  .formation__cours {
+  .formation__liste .formation__cours {
     width: 45%;
   }
-  .formation__cours:hover {
+  .formation__liste .formation__cours:hover {
     transform: scale(1.1);
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .formation__cours {
+  .formation__liste .formation__cours {
     width: 30%;
   }
 }
@@ -985,6 +1050,31 @@ COMPOSANTES
     display: block;
     max-height: 1000px;
   }
+}
+
+.menu-categorie_cours-container .order {
+  display: flex;
+  color: white;
+  background-color: black;
+}
+
+.menu-categorie_cours-container .menu {
+  max-width: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.menu-categorie_cours-container .menu .menu-item a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.menu-categorie_cours-container .menu .current-menu-item a {
+  color: white;
+  background-color: black;
 }
 
 .site__footer {
