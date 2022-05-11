@@ -1080,6 +1080,7 @@ COMPOSANTES
   margin: 5px;
   background-color: #ff5353;
   border-radius: 15px;
+  transition: all .7s ease-in-out;
 }
 
 .menu-categorie_cours-container .menu .menu-item a {
@@ -1201,6 +1202,12 @@ COMPOSANTES
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.galerie {
+  width: 100%;
+  background-color: #ff5353;
+  padding-top: 25px;
 }
 
 .site__footer {
