@@ -1,0 +1,71 @@
+/* Le parent de la boite__modale est la balise «body» */
+.boite__modale, .boite__carrousel {
+    position : fixed;
+    background-color: $color__principal__coloration;
+    z-index: 3;
+    transform : scale(0);
+    opacity: 0;
+    transition : all 1s ease-in-out;
+
+    &--ouvrir {
+        transform : scale(1);
+        opacity: 1;
+    }
+    &__ferme{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+    }
+    
+}
+/* Les dimensions de la boite modale */
+.boite__modale{
+    width : 50%;
+    height : 50%;
+    top:25%;
+    left:25%;
+    border-radius: 5px;
+    &__texte{
+        padding: 4%;
+        overflow: hidden;
+        font-size: clamp(0.9rem, 1vw, 1.2rem);
+    }
+}
+/* Les dimensions de la boite carrousel */
+.boite__carrousel{
+    width : 75%;
+    height : 75%;
+    top:12.5%;
+    left:12.5%;
+
+    &__navigation{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+        border: 2px solid red;
+        z-index: 1;
+
+        button{
+            width: 20px;
+            height: 20px;
+            margin: 10px 15px;
+            border-radius: 100%;
+            &:focus{
+                background-color: black;
+            }
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

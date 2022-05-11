@@ -25,6 +25,10 @@
         <section class="footer__auteur">Auteur : Yannick Langlois</section>
     </div>
 </footer>
+<div class="boite__modale">
+    <button class="boite__modale__ferme">X</button>
+    <article class="boite__modale__texte"></article>
+</div>
 <?php wp_footer(); ?>
 </body>
 
