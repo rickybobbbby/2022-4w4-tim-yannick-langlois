@@ -33,7 +33,7 @@
         <div class="cours__nbre-heure"><?= $nbHeures; ?></div>
         <p class="cours__sigle"><?= $sigleCours; ?> </p>
         <code class="cours__invisible"><?= $descCours; ?></code>
-        <p class="cours__desc"><?=wp_trim_words($descCours, 12, "<button class='cours__desc__bouton'>Suite</button>"); ?></p>
+        <p class="cours__desc"><?=wp_trim_words($descCours, 12, " <button class='cours__desc__bouton'>...</button>"); ?></p>
         <?php get_permalink(); ?>
     </div>
 </article>

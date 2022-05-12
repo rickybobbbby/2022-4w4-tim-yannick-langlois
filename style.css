@@ -543,6 +543,21 @@ COMPOSANTES
   display: none;
 }
 
+.formation__liste .formation__cours__description .cours__desc {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+}
+
+.formation__liste .formation__cours__description .cours__desc__bouton {
+  border: 0px;
+  border-radius: 5px;
+  background-color: #878787;
+  color: white;
+}
+
+.formation__liste .formation__cours__description .cours__desc__bouton:hover {
+  background-color: black;
+}
+
 .formation__liste .formation__cours:hover .formation__cours__description {
   left: 0px;
   transition: all .7s ease-in-out;
@@ -624,6 +639,10 @@ COMPOSANTES
 .single__cours .single__cours__contenu .single__cours__description {
   padding: 15px;
   color: #ff5353;
+}
+
+.single__cours .single__cours__contenu .single__cours__description h2 {
+  color: black;
 }
 
 .single__cours .single__cours__contenu .single__cours__description p {
@@ -1077,7 +1096,7 @@ COMPOSANTES
 .menu-categorie_cours-container .menu .menu-item {
   display: flex;
   width: 10%;
-  min-width: 50px;
+  min-width: 60px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1230,12 +1249,21 @@ COMPOSANTES
 }
 
 .boite__modale__ferme, .boite__carrousel__ferme {
+  border: 0px;
+  border-radius: 5px;
+  background-color: #878787;
+  color: white;
+  text-align: center;
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   top: 10px;
   right: 10px;
   z-index: 1;
+}
+
+.boite__modale__ferme:hover, .boite__carrousel__ferme:hover {
+  background-color: black;
 }
 
 /* Les dimensions de la boite modale */
@@ -1244,11 +1272,12 @@ COMPOSANTES
   height: 50%;
   top: 25%;
   left: 25%;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .boite__modale__texte {
   padding: 4%;
+  line-height: 1.5rem;
   overflow: hidden;
   font-size: clamp(0.9rem, 1vw, 1.2rem);
 }
