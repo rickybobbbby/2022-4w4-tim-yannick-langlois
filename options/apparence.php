@@ -28,13 +28,20 @@
         $manager->add_section('modifier_principal_coloration', [
                                 "title"=> "Modifier la coloration thematique"
                                 ]);
-        $manager->add_setting('principal_coloration',[
-                                "default"=> "#ff5353",
-                                "sanitize_callback"=> "sanitize_hex_color"
-                                ]);
+        $manager->add_setting('principal_coloration',["default"=> "#ff5353","sanitize_callback"=> "sanitize_hex_color"]);
         $manager->add_control(new WP_Customize_Color_Control($manager, 'principal_coloration',[
                                 "section"=>"modifier_principal_coloration",
                                 "label"=>"coloration thematique"
+        ]));
+        $manager->add_setting('principal_blanc',["default"=> "#ffffff","sanitize_callback"=> "sanitize_hex_color"]);
+        $manager->add_control(new WP_Customize_Color_Control($manager, 'principal_blanc',[
+                                "section"=>"modifier_principal_coloration",
+                                "label"=>"coloration blanche"
+        ]));
+        $manager->add_setting('principal_noir',["default"=> "#000000","sanitize_callback"=> "sanitize_hex_color"]);
+        $manager->add_control(new WP_Customize_Color_Control($manager, 'principal_noir',[
+                                "section"=>"modifier_principal_coloration",
+                                "label"=>"coloration noir"
         ]));
     });
 ?>

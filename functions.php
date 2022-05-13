@@ -42,7 +42,9 @@ if (is_customize_preview()) {
 
         //refete a nos variable dans couleurs.scss
 		$variables = [
-			'$color__principal__coloration' => get_theme_mod('principal_coloration', '#ff5353')
+			'$color__principal__blanc' => get_theme_mod('principal_blanc', '#ffffff'),
+            '$color__principal__noir' => get_theme_mod('principal_noir', '#000000'),
+            '$color__principal__coloration' => get_theme_mod('principal_coloration', '#ff5353')
 		];
 
         //script de compilation qui nous retourn les valeur en live 
@@ -75,7 +77,9 @@ add_action('customize_save_after', function() {
 	    $target_css = get_stylesheet_directory() . '/style.css';
  
 	$variables = [
-		'$color__principal__coloration' => get_theme_mod('principal_coloration', '#ff5353')
+		'$color__principal__blanc' => get_theme_mod('principal_blanc', '#ffffff'),
+        '$color__principal__noir' => get_theme_mod('principal_noir', '#000000'),
+        '$color__principal__coloration' => get_theme_mod('principal_coloration', '#ff5353')
 	];
     //script de compilation qui compile les choix fait 
 	$compiler->setVariables($variables);
