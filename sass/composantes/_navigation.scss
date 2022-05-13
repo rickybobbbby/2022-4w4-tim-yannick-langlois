@@ -1,3 +1,11 @@
+.site__barre{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    column-gap: 10px;
+}
 #chk-burger {
     display: none;
 }
@@ -47,7 +55,7 @@
 .menu-principal-container{ 
 overflow: hidden;
 max-height: 0px;
-transition: all 0.3s ease-out;
+transition: all .25s ease-out;
 padding : 0 0 0 0;
     .menu{
         list-style-type: none;
