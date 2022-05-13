@@ -1,5 +1,10 @@
 <?php 
 
+require_once("options/apparence.php");
+
+//!!custom library pour compiler se qui nous permette de compiler du scss changer par notre costumizer!!
+require_once(get_stylesheet_directory() . '/lib/scssphp/scss.inc.php');
+
 function cidw_4w4_enqueue(){
     //wp_enqueue_style('style_css', get_stylesheet_uri());
     wp_enqueue_style('4w4-le-style', 
@@ -19,6 +24,66 @@ function cidw_4w4_enqueue(){
 }
 
 add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
+
+/* -------------------------------------------------- compilage du customizer */
+
+/*---------------------
+//!!custom function pour compiler notre couleur dans le preview du customizer!!
+---------------------*/
+if (is_customize_preview()) {
+	add_action('wp_head', function() {
+		$compiler = new ScssPhp\ScssPhp\Compiler();
+
+        //variable de localisation qui nous saire de target et conteneur
+		$source_scss = get_stylesheet_directory() . '/sass/style.scss';
+		$scssContents = file_get_contents($source_scss);
+		$import_path = get_stylesheet_directory() . '/sass';
+		$compiler->addImportPath($import_path);
+
+        //refete a nos variable dans couleurs.scss
+		$variables = [
+			'$color__principal__coloration' => get_theme_mod('principal_coloration', '#ff5353')
+		];
+
+        //script de compilation qui nous retourn les valeur en live 
+        //(A NOTER: sa nous permet de passer outre le probleme de live visalisation)
+		$compiler->setVariables($variables);
+		$css = $compiler->compile($scssContents);
+		if (!empty($css) && is_string($css)) {
+			echo '<style type="text/css">' . $css . '</style>';
+		}
+	});
+}
+
+/*---------------------
+//!!custom function pour compiler notre difinitevement
+---------------------*/
+/* !! A NOTER: cela ne override aucunement le scss source, 
+    donc si nous compilons le code source avec LIVE SASS COMPILER, 
+    on retour au theme d'origine !! 
+
+    LE BUT: ne pas avoir a faire des balise style dans le html
+*/
+add_action('customize_save_after', function() {
+	$compiler = new ScssPhp\ScssPhp\Compiler();
+
+        //variable de localisation qui nous saire de target et conteneur
+	    $source_scss = get_stylesheet_directory() . '/sass/style.scss';
+		$scssContents = file_get_contents($source_scss);
+		$import_path = get_stylesheet_directory() . '/sass';
+		$compiler->addImportPath($import_path);
+	    $target_css = get_stylesheet_directory() . '/style.css';
+ 
+	$variables = [
+		'$color__principal__coloration' => get_theme_mod('principal_coloration', '#ff5353')
+	];
+    //script de compilation qui compile les choix fait 
+	$compiler->setVariables($variables);
+	$css = $compiler->compile($scssContents);
+	if (!empty($css) && is_string($css)) {
+		file_put_contents($target_css, $css);
+	}
+});
 
 /* -------------------------------------------------- Enregistré le menu */
 function cidw_4w4_register_nav_menu(){
@@ -162,3 +227,4 @@ function cidw_4w4_query_vars($params){
 add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
 add_filter('query_vars', 'cidw_4w4_query_vars' );
 ?>
+
