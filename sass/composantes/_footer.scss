@@ -17,11 +17,12 @@
     padding: 15px;
     &__colonne{ // .site__footer__colonne
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       section{ // .site__footer__colonne section
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         ul {
           padding: 0px;
           list-style: none;
@@ -35,6 +36,7 @@
         }
         @media screen and (min-width: $largeur__media--tablette) {
           flex : 0 0 30%;
+          text-align: center;
         }
         &:first-child {
           text-align: left;
@@ -43,9 +45,6 @@
         &:last-child {
           text-align: right;
           padding-right: 2%;
-        }
-        &+ section{ // .site__footer__colonne section
-          border-left: solid 1px white;
         }
       }
     }

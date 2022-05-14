@@ -1339,13 +1339,14 @@ COMPOSANTES
 
 .site__footer__colonne {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .site__footer__colonne section {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .site__footer__colonne section ul {
@@ -1377,6 +1378,7 @@ COMPOSANTES
 @media screen and (min-width: 700px) {
   .site__footer__colonne section {
     flex: 0 0 30%;
+    text-align: center;
   }
 }
 
@@ -1388,10 +1390,6 @@ COMPOSANTES
 .site__footer__colonne section:last-child {
   text-align: right;
   padding-right: 2%;
-}
-
-.site__footer__colonne section + section {
-  border-left: solid 1px white;
 }
 
 .site__footer__ligne {

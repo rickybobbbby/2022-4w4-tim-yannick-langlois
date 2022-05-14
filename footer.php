@@ -2,8 +2,8 @@
     <h2 class="footer__titre">Navigation du site</h2>
     <div class="site__footer__colonne">
         <section class="footer__adresse"><?php get_sidebar("pied_page_colonne_1"); ?> </section>
-        <section class="footer__article"><?php get_sidebar("pied_page_colonne_2"); ?></section>
-        <section class="footer__lien"><?php get_sidebar("pied_page_colonne_3"); ?></section>
+            <section class="footer__article"><?php get_sidebar("pied_page_colonne_2"); ?></section>
+            <section class="footer__lien"><?php get_sidebar("pied_page_colonne_3"); ?></section>
     </div>
     <div class="site__footer__ligne">
         <section class="footer__menu">
