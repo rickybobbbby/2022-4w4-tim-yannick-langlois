@@ -1241,11 +1241,19 @@ COMPOSANTES
 
 /* Les dimensions de la boite modale */
 .boite__modale {
-  width: 50%;
-  height: 50%;
-  top: 25%;
-  left: 25%;
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
+}
+
+@media screen and (min-width: 700px) {
+  .boite__modale {
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    border-radius: 15px;
+  }
 }
 
 .boite__modale__texte {
