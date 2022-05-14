@@ -17,6 +17,7 @@
             background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
         }
         .menu-item{//li
+            animation: joie 5s infinite ease-in-out;
             display: flex;
             width: 20%;
             height : 175px;

@@ -32,7 +32,7 @@
   /**
    * parcourir l'ensemble des éléments de la galerie pour créer le carrousel
    *  
-   * */
+  **/
 
   let index = 0 // pour associer chaque bouton radio à une image de la galerie.
   for (const img of galerie__img) {
@@ -65,8 +65,6 @@
 
       boite__carrousel__img.children[this.dataset.index].classList.add('img--ouvrir')
     })
-
-
     /**
      * Ouverture de la boite__carrousel
      */

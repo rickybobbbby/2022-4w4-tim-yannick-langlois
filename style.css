@@ -1132,6 +1132,7 @@ COMPOSANTES
 }
 
 .menu-accueil-container .menu .menu-item, .menu-evenement-container .menu .menu-item {
+  animation: joie 5s infinite ease-in-out;
   display: flex;
   width: 20%;
   height: 175px;
@@ -1193,6 +1194,7 @@ COMPOSANTES
 }
 
 .galerie img {
+  animation: lookthis 5s 0s infinite ease-in-out;
   background-color: #ffffff;
   opacity: 50%;
   border-radius: 50px !important;
@@ -1200,6 +1202,7 @@ COMPOSANTES
 }
 
 .galerie img:hover {
+  animation: lookthis 0s 0s ease-in-out;
   opacity: 100%;
   border-radius: 5px !important;
 }
@@ -1494,10 +1497,10 @@ ANIMATION
     transform: rotate(0deg);
   }
   45% {
-    transform: rotate(5deg);
+    transform: rotate(1deg);
   }
   50% {
-    transform: rotate(-5deg);
+    transform: rotate(-1deg);
   }
   55% {
     transform: rotate(0deg);
@@ -1547,6 +1550,13 @@ ANIMATION
 
 #chk-burger:checked ~ #burger .burger__ligne:nth-of-type(3) {
   clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
+}
+
+/*animation */
+@keyframes lookthis {
+  50% {
+    opacity: 75%;
+  }
 }
 
 /* ---------------------------------------------------------
