@@ -733,90 +733,75 @@ COMPOSANTES
   }
 }
 
-.carousel {
-  color: white;
-  position: relative;
-  width: 100%;
-  min-height: 300px;
-}
-
-.carousel .carousel__list {
-  position: relative;
-  height: 100%;
-  transition: transform .7s ease-in-out;
-}
-
-.carousel .carousel__list__slide {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 300px;
-}
-
-.carousel .carousel__list__slide__image {
-  height: 50%;
-}
-
-.carousel .carousel__list__slide__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 68%, 0 100%);
-}
-
-.carousel .carousel__list__slide__message {
-  padding: 15px;
-}
-
-.carousel .carousel__list__slide__message h2 {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 1000px) {
-  .carousel .carousel__list__slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .carousel .carousel__list__slide__image {
-    width: 70%;
-  }
-  .carousel .carousel__list__slide__image img {
+/* OLD CAROUSEL PREUVE DE CONCEPT*/
+/*.carousel {
+    color: white;
+    position: relative;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    clip-path: polygon(0 0, 80% 0%, 40% 100%, 0% 100%);
-  }
-  .carousel .carousel__list__slide__message {
-    width: 30%;
-  }
-  .carousel .carousel__list__slide__message h2 {
-    font-size: 2em;
-  }
+    min-height: 300px;
+    .carousel__list{
+        position: relative;
+        height: 100%;
+        transition: transform .7s ease-in-out;;
+        &__slide{
+            @include flexColumn;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 300px;
+            &__image{
+                height: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    clip-path: polygon(0 0, 100% 0, 100% 68%, 0 100%);
+                }
+            }
+            &__message{
+                padding: 15px;
+                h2{
+                    font-size: 1em;
+                }
+            }
+            @media screen and (min-width : $largeur__media--desktop){
+                @include flexRow;
+                justify-content: space-between;
+                &__image{
+                    width: 70%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        clip-path: polygon(0 0, 80% 0%, 40% 100%, 0% 100%);
+                    }
+                }
+                &__message{
+                    width: 30%;
+                    h2{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }   
 }
-
-.carousel__nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.carousel__nav .carousel__indicateur {
-  margin: 15px;
-  padding: 15px;
-  border: 0;
-  border-radius: 10%;
-  animation: joie 2s infinite ease-in-out;
-  background-color: #ff5353;
-}
-
-.carousel__nav .carousel__indicateur.slide-Active {
-  background-color: #ffffff;
-}
-
+.carousel__nav{
+    @include flexRow;
+    justify-content: center;
+    .carousel__indicateur{
+        margin: 15px;
+        padding: 15px;
+        border: 0;
+        border-radius: 10%;
+        animation: joie 2s infinite ease-in-out;
+        background-color: $color__principal__coloration;
+        &.slide-Active{
+            background-color: $color__principal__blanc;
+        }
+    }
+}*/
 .site__header {
   display: flex;
   flex-direction: column;
@@ -1201,11 +1186,87 @@ COMPOSANTES
 }
 
 .galerie {
+  padding: 10px;
   width: 100%;
   background-color: #ff5353;
   padding-top: 25px;
 }
 
+.galerie img {
+  background-color: #ffffff;
+  opacity: 50%;
+  border-radius: 50px !important;
+  transition: all 0.3s ease-out;
+}
+
+.galerie img:hover {
+  opacity: 100%;
+  border-radius: 5px !important;
+}
+
+/* Les dimensions de la boite carrousel */
+.boite__carrousel {
+  top: 2.5%;
+  left: 2.5%;
+  width: 95%;
+  height: 95%;
+}
+
+@media screen and (min-width: 700px) {
+  .boite__carrousel {
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+  }
+}
+
+.boite__carrousel__img {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.boite__carrousel__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.boite__carrousel__img img.img--ouvrir {
+  opacity: 1;
+}
+
+.boite__carrousel__navigation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.boite__carrousel__navigation .bouton {
+  width: 20px;
+  height: 20px;
+  margin: 20px 10px;
+  border-radius: 100%;
+}
+
+.boite__carrousel__navigation .bouton:focus {
+  background-color: black;
+}
+
+/* fin .boite__carrousel */
 /* Le parent de la boite__modale est la balise «body» */
 .boite__modale, .boite__carrousel {
   position: fixed;
@@ -1216,7 +1277,7 @@ COMPOSANTES
   transition: all 1s ease-in-out;
 }
 
-.boite__modale--ouvrir, .boite__carrousel--ouvrir {
+.boite__modale.ouvrir, .boite__carrousel.ouvrir {
   transform: scale(1);
   opacity: 1;
 }
@@ -1261,44 +1322,6 @@ COMPOSANTES
   line-height: 1.5rem;
   overflow: hidden;
   font-size: clamp(0.9rem, 1vw, 1.2rem);
-}
-
-/* Les dimensions de la boite carrousel */
-.boite__carrousel {
-  width: 75%;
-  height: 75%;
-  top: 12.5%;
-  left: 12.5%;
-}
-
-.boite__carrousel__navigation {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  bottom: 0;
-  width: 100%;
-  border: 2px solid red;
-  z-index: 1;
-}
-
-.boite__carrousel__navigation button {
-  width: 20px;
-  height: 20px;
-  margin: 10px 15px;
-  border-radius: 100%;
-}
-
-.boite__carrousel__navigation button:focus {
-  background-color: black;
-}
-
-.boite__carrousel__img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .site__footer {

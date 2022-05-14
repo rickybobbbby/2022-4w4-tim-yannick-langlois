@@ -1,5 +1,71 @@
 .galerie{
+    padding: 10px;
     width: 100%;
     background-color: $color__principal__coloration;
     padding-top: 25px;
+    img{
+        background-color: $color__principal__blanc;
+        opacity: 50%;
+        border-radius: 50px !important;
+        transition: all 0.3s ease-out;
+        &:hover {
+            opacity: 100%;
+            border-radius: 5px !important;
+        }
+    }
 }
+/* Les dimensions de la boite carrousel */
+.boite__carrousel{
+    top: 2.5%;
+    left: 2.5%;
+    width : 95%;
+    height : 95%;
+    @media screen and (min-width : $largeur__media--tablette) {   
+    top: 12.5%;
+    left: 12.5%;
+    width : 75%;
+    height : 75%;
+    }       
+    
+    &__img { // conteneur d'img  .boite__carrousel__img
+        position : absolute;
+        overflow: hidden;
+        top : 0;
+        left : 0;
+        object-fit: cover;
+        width :100%;
+        height : 100%;
+        img{
+            position : absolute;
+            top : 0;
+            left : 0;
+            object-fit: cover;
+            width :100%;
+            height : 100%;
+            //transform: translateX(-100%);
+            opacity : 0;
+            transition : all 1s;
+            &.img--ouvrir{
+                //transform: translateX(0);
+                opacity : 1;
+            }
+        }
+    }
+    &__navigation {  //  .boite__carrousel__navigation
+        position : absolute;
+        display: flex;
+        justify-content: center;
+        width : 100%;
+        bottom: 0;
+        z-index:1;
+        .bouton {  // .boite__carrousel__navigation .bouton  (les boutons radio )
+            width : 20px;
+            height : 20px;
+            margin : 20px 10px;
+            border-radius: 100%;
+            &:focus {
+                background-color: black;
+            }
+        }
+    }
+}  /* fin .boite__carrousel */

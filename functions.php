@@ -6,7 +6,6 @@ require_once("options/apparence.php");
 require_once(get_stylesheet_directory() . '/lib/scssphp/scss.inc.php');
 
 function cidw_4w4_enqueue(){
-    //wp_enqueue_style('style_css', get_stylesheet_uri());
     wp_enqueue_style('4w4-le-style', 
         get_template_directory_uri() . '/style.css',
         array(), filemtime(get_template_directory() . '/style.css'),
@@ -18,8 +17,17 @@ function cidw_4w4_enqueue(){
         filemtime(get_template_directory() . '/javascript/boite-modale.js'),
         true); // true pour intégrer le js en bas du document
 
+    wp_register_script('cidw-4w4-carrousel-gallerie', 
+        get_template_directory_uri() . '/javascript/carrousel-gallerie.js',
+        array(),
+        filemtime(get_template_directory() . '/javascript/carrousel-gallerie.js'),
+        true);
+
         if (is_category(['cours','web','design','creation3d','utilitaire','jeu','video'])){
             wp_enqueue_script('cidw-4w4-boite-modale');
+        }
+        if (is_front_page()){
+            wp_enqueue_script('cidw-4w4-carrousel-gallerie');
         }
 }
 
@@ -104,13 +112,10 @@ add_action( 'after_setup_theme', 'cidw_4w4_register_nav_menu', 0 );
 
 /* ---------------------------------------------------------------------- filtré les choix du menu principal */
 function cidw_4w4_filtre_choix_menu($obj_menu){
-    //var_dump($obj_menu);
+    
     foreach($obj_menu as $cle => $value)
     {
-       // print_r($value);
-       //$value->title = substr($value->title,0,7);
        $value->title = wp_trim_words($value->title,3,"...");
-       // echo $value->title . '<br>';
     }
     return $obj_menu;
 }
@@ -141,6 +146,8 @@ function cidw_4w4_add_theme_support()
 }
  
 add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
+
+function remove_admin_login_header() {remove_action('wp_head', '_admin_bar_bump_cb'); } add_action('get_header', 'remove_admin_login_header');
 
 /*---------------------------------------------------------- Enregistrement des sidebar */
 
@@ -198,8 +205,8 @@ function my_register_sidebars() {
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 
-//ajout reference au script
-wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/carousel.js');
+//ajout reference au script OLD
+// OLD wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/carousel.js');
 
 //ajout script pour les query
 function cidw_4w4_pre_get_posts(WP_Query $query)
