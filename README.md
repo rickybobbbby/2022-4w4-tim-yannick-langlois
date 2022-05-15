@@ -2,7 +2,6 @@
 ### Auteur : Yannick langlois 
 ### Date de remise : 20 fevrier 2022
 
-```
 Theme completer, contenu des page n est pas tous fini mais le theme devrai s adapter peu importe le contenu
 
 animation:
