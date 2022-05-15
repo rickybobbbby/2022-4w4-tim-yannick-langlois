@@ -12,6 +12,13 @@
     
     <?php wp_head() ?>
     <?php show_admin_bar(true); ?>
+    <style>
+        :root {
+            --color__principal__blanc: <?= get_theme_mod('principal_blanc', '#ffffff') ?>;
+            --color__principal__noir : <?= get_theme_mod('principal_noir', '#000000') ?>;
+            --color__principal__coloration : <?= get_theme_mod('principal_coloration', '#ff5353') ?>;
+        }
+    </style>
 </head>
 <body  <?php body_class("site"); ?>>
 

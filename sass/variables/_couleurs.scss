@@ -1,7 +1,12 @@
+:root {
+    --color__principal__blanc: #ffffff;
+    --color__principal__noir :  #000000;
+    --color__principal__coloration : #ff5353;
+  }
 /*---------------- COULEUR PRINCIPAL */
-$color__principal__blanc : #ffffff !default;
-$color__principal__noir :  #000000 !default;
-$color__principal__coloration : #ff5353 !default;
+$color__principal__blanc : var(--color__principal__blanc) !default;
+$color__principal__noir : var(--color__principal__noir) !default;
+$color__principal__coloration : var(--color__principal__coloration) !default;
 $color__principal__nuancer : #2c2c2c !default;
 $color__principal__nuancer__gris : #878787 !default;
 $color__principal__nuancer__pale : #cfcfcf !default;
