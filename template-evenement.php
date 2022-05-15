@@ -32,7 +32,7 @@
         <?php endif; ?>
         
 
-   <?php endif; ?>
+    <?php endif; ?>
     </article>
 </main>
 <?php get_footer() ?>

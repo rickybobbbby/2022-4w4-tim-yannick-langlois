@@ -1,8 +1,19 @@
-# Ratrapage Lab5 - 4W4 - Conception d'interface et développement Web
+# TP2 - 4W4 - Conception d'interface et développement Web
 ### Auteur : Yannick langlois 
 ### Date de remise : 20 fevrier 2022
 
 ```
-	Ajouter des filtres de catégorie sur la grille des cours DONE
-	Améliorer le style de la grille des cours DONE
-	Ajouter le fichier .scss éléments/_balise.scss pour les balises h1 à h6 et p DONE
+Theme completer, contenu des page n est pas tous fini mais le theme devrai s adapter peu importe le contenu
+
+animation:
+-les certain bouton moin claire von bouger pour atirer l oeil
+-presque tous les element interactif on un hover transition
+-plusieur clip path son utiliser sur un transition pour reveler de l info
+-les image de la galerie on une animation d opaciter pour atirer l oeil
+... explorer a votre guise
+
+un costumizer est present pour toute les couleurs principal du site
+
+tout le site est mobile first ou est adaptable en mobile tablette et pc
+
+

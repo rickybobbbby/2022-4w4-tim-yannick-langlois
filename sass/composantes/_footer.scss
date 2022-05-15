@@ -1,4 +1,5 @@
 @mixin texte_article {
+  margin: 10px;
   font-size: 0.7em;
   @media screen and (min-width: $largeur__media--tablette){
     font-size: 1em;
@@ -20,9 +21,12 @@
       flex-wrap: wrap;
       justify-content: space-between;
       section{ // .site__footer__colonne section
+        margin: 10px;
         display: flex;
         flex-direction: column;
         text-align: left;
+        background-color: $color__principal__nuancer;
+        border-radius: 25px;
         ul {
           padding: 0px;
           list-style: none;
