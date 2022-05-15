@@ -238,4 +238,3 @@ function cidw_4w4_query_vars($params){
 add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
 add_filter('query_vars', 'cidw_4w4_query_vars' );
 ?>
-
