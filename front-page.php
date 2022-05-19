@@ -11,7 +11,7 @@
             "menu" => "evenement",
             "container" => "nav")); ?>
         </div>
-        <div class="event__panel">
+        <div class="atelier__panel">
             <h2>Les atelier du tim</h2>
             <?php wp_nav_menu(array(
             "menu" => "atelier",
