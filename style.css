@@ -1463,15 +1463,15 @@ COMPOSANTES
   height: 100%;
 }
 
-.evenement {
+.evenement, .atelier {
   padding-left: 20px;
 }
 
-.evenement p {
+.evenement p, .atelier p {
   color: #cfcfcf;
 }
 
-.evenement__resume {
+.evenement__resume, .atelier__resume {
   color: #cfcfcf;
 }
 
