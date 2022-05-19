@@ -26,8 +26,9 @@
             align-items: center;
             text-align: center;
             margin: 5px;
-            background-color: $color__principal__coloration;
+            background-color: $color__principal__blanc;
             border-radius: 5px;
+            transition: all .7s ease-in-out;
             a{ //a
                 display: flex;
                 flex-direction: column;
@@ -55,7 +56,10 @@
                     background-size: cover;
                     transition: all .7s ease-in-out;
                 }
-                &:hover{
+            } 
+            &:hover{
+                background-color: $color__principal__coloration;
+                a{
                     .menu-item-icone {
                         width : 2rem;
                         height : 2rem;
@@ -64,9 +68,9 @@
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
-                    }
+                    }   
                 }
-            }  
+            } 
         }
     }
 } // .menu-accueil-container

@@ -1147,8 +1147,9 @@ COMPOSANTES
   align-items: center;
   text-align: center;
   margin: 5px;
-  background-color: var(--color__principal__coloration);
+  background-color: var(--color__principal__blanc);
   border-radius: 5px;
+  transition: all .7s ease-in-out;
 }
 
 .menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a, .menu-atelier-container .menu .menu-item a {
@@ -1182,7 +1183,11 @@ COMPOSANTES
   transition: all .7s ease-in-out;
 }
 
-.menu-accueil-container .menu .menu-item a:hover .menu-item-icone, .menu-evenement-container .menu .menu-item a:hover .menu-item-icone, .menu-atelier-container .menu .menu-item a:hover .menu-item-icone {
+.menu-accueil-container .menu .menu-item:hover, .menu-evenement-container .menu .menu-item:hover, .menu-atelier-container .menu .menu-item:hover {
+  background-color: var(--color__principal__coloration);
+}
+
+.menu-accueil-container .menu .menu-item:hover a .menu-item-icone, .menu-evenement-container .menu .menu-item:hover a .menu-item-icone, .menu-atelier-container .menu .menu-item:hover a .menu-item-icone {
   width: 2rem;
   height: 2rem;
   margin-top: 10px;
@@ -1479,12 +1484,16 @@ COMPOSANTES
   padding-left: 20px;
 }
 
+.atelier h2 {
+  color: var(--color__principal__coloration);
+}
+
 .atelier p {
   color: #cfcfcf;
 }
 
 .atelier_html .menu-item-icone {
-  background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+  background-image: url("https://s2.svgbox.net/files.svg?ic=html");
 }
 
 .atelier_css .menu-item-icone {
@@ -1492,11 +1501,11 @@ COMPOSANTES
 }
 
 .atelier_react .menu-item-icone {
-  background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+  background-image: url("https://s2.svgbox.net/files.svg?ic=reactjs");
 }
 
 .atelier_git .menu-item-icone {
-  background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+  background-image: url("https://s2.svgbox.net/files.svg?ic=git");
 }
 
 /* ---------------------------------------------------------

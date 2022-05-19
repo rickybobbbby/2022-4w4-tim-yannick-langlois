@@ -1,6 +1,6 @@
-# TP2 - 4W4 - Conception d'interface et développement Web
+# exam Final - 4W4 - Conception d'interface et développement Web
 ### Auteur : Yannick langlois 
-### Date de remise : 20 fevrier 2022
+### Date de remise : 19 may 2022
 
 Theme completer, contenu des page n est pas tous fini mais le theme devrai s adapter peu importe le contenu
 
@@ -17,3 +17,6 @@ tout le site est mobile first ou est adaptable en mobile tablette et pc
 
 link: github page: [2022-4w4-tim-yannick-langlois](https://rickybobbbby.github.io/2022-4w4-tim-yannick-langlois/)
 link: siteground: [2022-4w4-tim-yannick-langlois-siteground](https://eddym67.sg-host.com/)
+
+EXAM FINAL 
+ajout des bouton et template  atelier

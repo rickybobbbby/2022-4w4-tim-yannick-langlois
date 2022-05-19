@@ -1,18 +1,21 @@
 .atelier{
     padding-left: 20px;
+    h2{
+        color: $color__principal__coloration; 
+    }
     p{
         color: $color__principal__nuancer__pale;
     }
 }
 .atelier_html .menu-item-icone{
-    background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+    background-image: url("https://s2.svgbox.net/files.svg?ic=html");
 }
 .atelier_css .menu-item-icone{
     background-image: url("https://s2.svgbox.net/files.svg?ic=css");
 }
 .atelier_react .menu-item-icone{
-    background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+    background-image: url("https://s2.svgbox.net/files.svg?ic=reactjs");
 }
 .atelier_git .menu-item-icone{
-    background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+    background-image: url("https://s2.svgbox.net/files.svg?ic=git");
 }
