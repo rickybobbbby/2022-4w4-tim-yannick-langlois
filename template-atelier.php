@@ -12,22 +12,19 @@
     <!-- <h1>---- page.php ------</h1> -->
     <?php if (have_posts()) : the_post(); ?>
         <h1><?php the_title() ?></h1>
-        <section class="evenement__resume">
+        <section class="atelier__resume">
             <?php the_field('Description de l’atelier'); ?>   
         </section>
-        <p class="evenement__endroit">
+        <p class="=atelier__endroit">
             <?php the_field('Local ou se déroulera l’atelier'); ?>
         </p>
-        <p class="evenement__date">
+        <p class="atelier__date">
             <?php the_field('Date de debut'); ?>
         </p>
-        <p class="evenement__heure">
+        <p class="atelier__date_fin">
             <?php the_field('Date de fin'); ?>
         </p>
         <p><?php the_field('Animateur'); ?></p>
-        <?php endif; ?>
-        
-
     <?php endif; ?>
     </article>
 </main>
