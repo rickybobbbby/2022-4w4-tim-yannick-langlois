@@ -24,7 +24,11 @@
         <p class="atelier__date_fin">
             <?php the_field('Date de fin'); ?>
         </p>
-        <p><?php the_field('Animateur'); ?></p>
+        <p><?php the_field('heure_de_debut'); ?></p>
+        <p><?php the_field('heure_de_fin'); ?></p>
+        <p><?php the_field('animateur'); ?></p>
+        <p><?php the_field('Jours de la semaine de l’atelier'); ?></p>
+        <p><?php the_field('Durée d’une séance d’atelier'); ?></p>
     <?php endif; ?>
     </article>
 </main>
